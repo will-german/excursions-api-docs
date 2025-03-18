@@ -1,6 +1,6 @@
 get:
   tags:
-    - WIP Excursions
+    - NOT AVAILABLE Excursions
   summary: Get Excursion By Id
   description: Return a new excursion object with a matching id.
   operationId: getExcursionById

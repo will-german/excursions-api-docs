@@ -1,6 +1,6 @@
 patch:
   tags:
-    - WIP Trips
+    - NOT AVAILABLE Trips
   summary: Update Trip
   description: Return an updated Trip object.
   operationId: updateTrip

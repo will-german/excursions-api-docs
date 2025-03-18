@@ -1,6 +1,6 @@
 delete:
   tags:
-    - WIP Friends
+    - NOT AVAILABLE Friends
   summary: Remove Friend
   description: Remove friend from user's friend list.
   operationId: remove-friend

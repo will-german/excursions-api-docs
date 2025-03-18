@@ -1,6 +1,6 @@
 post:
   tags:
-    - WIP Trips
+    - NOT AVAILABLE Trips
   summary: Create Trip
   description: Return a newly created Trip object.
   operationId: createTrip

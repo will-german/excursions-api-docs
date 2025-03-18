@@ -1,6 +1,6 @@
 post:
   tags:
-    - WIP Friends
+    - NOT AVAILABLE Friends
   summary: Add Friend
   description: Create and send a friend request.
   operationId: add-friend

@@ -1,6 +1,6 @@
 delete:
   tags:
-    - WIP Friends
+    - NOT AVAILABLE Friends
   summary: Delete Friend Request
   description: Delete an outgoing pending friend request.
   operationId: delete-friend-request

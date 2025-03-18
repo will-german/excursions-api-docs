@@ -1,6 +1,6 @@
 post:
   tags:
-    - WIP Excursions
+    - NOT AVAILABLE Excursions
   summary: Create Excursion
   description: Return a new excursion object.
   operationId: createExcursion

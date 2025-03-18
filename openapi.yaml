@@ -38,13 +38,13 @@ x-tagGroups:
 
   - name: Excursions
     tags:
-      - WIP Excursions
-      - WIP Trips
+      - NOT AVAILABLE Excursions
+      - NOT AVAILABLE Trips
 
   - name: Social
     tags:
-      - WIP Friends
-      - WIP Sharing Excursions
+      - NOT AVAILABLE Friends
+      - NOT AVAILABLE Sharing Excursions
 
 paths:
   # --- Users --- #
