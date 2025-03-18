@@ -1,0 +1,20 @@
+type: object
+description: An excursion object.
+
+required:
+  - name
+  - host
+  - trips
+
+properties:
+  name:
+    $ref: '../../Name.yaml'
+  description:
+    $ref: '../../Name.yaml'
+  host:
+    $ref: '../../UserId.yaml'
+  trips:
+    type: array
+    items:
+      type: object
+      $ref: '../../Trip.yaml'

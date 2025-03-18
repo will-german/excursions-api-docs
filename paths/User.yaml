@@ -1,0 +1,117 @@
+post:
+  tags:
+    - User Management
+  summary: Create User
+  description: Return a new user with a bearer token.
+  operationId: createUser
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/user/createUser/Request.yaml'
+
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/createUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+get:
+  tags:
+    - User Management
+  summary: Get User
+  description: Return a user object.
+  operationId: getUser
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/getUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/GetUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+
+patch:
+  tags:
+    - User Management
+  summary: Update User
+  description: Return an updated user object.
+  operationId: updateUser
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/user/updateUser/Request.yaml'
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/updateUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/updateUser/userjoe.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+delete:
+  tags:
+    - User Management
+  summary: Delete User
+  description: Return a deleted user object.
+  operationId: deleteUser
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/deleteUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/deleteUser/deletedJoeUser.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

@@ -1,0 +1,12 @@
+type: object
+description: A generic user of the Excursions web application.
+
+required:
+  - email
+  - password
+
+properties:
+  email:
+    $ref: '../../Email.yaml'
+  password:
+    $ref: '../../Password.yaml'

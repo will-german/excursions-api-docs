@@ -1,0 +1,38 @@
+post:
+  tags:
+    - WIP Friends
+  summary: Add Friend
+  description: Create and send a friend request.
+  operationId: add-friend
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            friendId:
+              type: string
+              $ref: '../components/schemas/UserId.yaml'
+
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/getUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

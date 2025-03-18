@@ -1,0 +1,82 @@
+openapi: 3.1.0
+
+info:
+  version: v0.1.0
+  title: Excursions API
+  description: |
+    An excursion travel planner. Good luck implementing this trash. You'll need it. 🤕
+    
+  license:
+    name: GNU Affero General Public License v3.0 (or later)
+    identifier: AGPL-3.0-or-later
+
+servers:
+  - url: 'https://excursions-api.com/api/v1'
+
+components:
+  securitySchemes:
+    BearerToken:
+      $ref: './components/securitySchemes/BearerToken.yaml'
+
+tags:
+  - name: User Management
+    description: Create, fetch, update and delete users.
+  - name: User Authentication
+    description: Manage the authentication status of a user.
+  - name: National Park Service
+    description: Query data from the NPS api.
+
+x-tagGroups:
+  - name: Users
+    tags:
+      - User Management
+      - User Authentication
+
+  - name: Third-Party APIs
+    tags:
+      - National Park Service
+
+  - name: Excursions
+    tags:
+      - WIP Excursions
+      - WIP Trips
+
+  - name: Social
+    tags:
+      - WIP Friends
+      - WIP Sharing Excursions
+
+paths:
+  # --- Users --- #
+  "/user":
+    $ref: './paths/User.yaml'
+  "/user/sign-in":
+    $ref: './paths/UserSignIn.yaml'
+  "/user/sign-out":
+    $ref: './paths/UserSignOut.yaml'
+  # --- Third-Party APIs --- #
+  "/national-parks":
+    $ref: './paths/NationalParks.yaml'
+  "/campgrounds":
+    $ref: './paths/Campgrounds.yaml'
+  "/things-to-do":
+    $ref: './paths/ThingsToDo.yaml'
+  # --- Excursions --- #
+  "/excursion":
+    $ref: './paths/excursion.yaml'
+  "/excursion/{excursionId}":
+    $ref: './paths/excursion_{id}.yaml'
+  "/excursion/{excursionId}/trip":
+    $ref: './paths/excursion_{id}_trip.yaml'
+  "/excursions/{excursionId}/trip/{tripId}":
+    $ref: './paths/excursion_{id}_trip_{id}.yaml'
+  # --- Social --- #
+  "/friend":
+    $ref: './paths/friend.yaml'
+  "/friend/{friendId}":
+    $ref: './paths/friend_{id}.yaml'
+  "/friend-request/":
+    $ref: './paths/friend-request.yaml'
+  "/friend-request/{friendId}":
+    $ref: './paths/friend-request_{id}.yaml'
+  # --- Shared Excursions --- #

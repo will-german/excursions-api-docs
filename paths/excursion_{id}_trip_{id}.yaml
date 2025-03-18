@@ -1,0 +1,94 @@
+patch:
+  tags:
+    - WIP Trips
+  summary: Update Trip
+  description: Return an updated Trip object.
+  operationId: updateTrip
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ExcursionId.yaml'
+      required: true
+      description: The id of the excursion object.
+    - in: path
+      name: tripId
+      schema:
+        type: string
+        $ref: '../components/schemas/TripId.yaml'
+      required: true
+      description: The id of the trip object.
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/excursion/updateTrip/Request.yaml'
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/updateTrip/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+delete:
+  tags:
+    - WIP Trips
+  summary: Delete Trip
+  description: Return the deleted Trip object.
+  operationId: deleteTrip
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ExcursionId.yaml'
+      required: true
+      description: The id of the excursion object.
+    - in: path
+      name: tripId
+      schema:
+        type: string
+        $ref: '../components/schemas/TripId.yaml'
+      required: true
+      description: The id of the trip object.
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/createTrip/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

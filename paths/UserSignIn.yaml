@@ -1,0 +1,29 @@
+post:
+  tags:
+    - User Authentication
+  summary: Sign In
+  description: Verify credentials and grant a bearer token.
+  operationId: signIn
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/user/signIn/Request.yaml'
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/signIn/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/SignIn.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

@@ -1,0 +1,19 @@
+post:
+  tags:
+    - User Authentication
+  summary: Sign Out
+  description: Verify user and revoke bearer token.
+  operationId: signOut
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      $ref: '../components/responses/200OK.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

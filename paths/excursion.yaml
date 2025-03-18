@@ -1,0 +1,34 @@
+post:
+  tags:
+    - WIP Excursions
+  summary: Create Excursion
+  description: Return a new excursion object.
+  operationId: createExcursion
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/excursion/createExcursion/Request.yaml'
+
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/createExcursion/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

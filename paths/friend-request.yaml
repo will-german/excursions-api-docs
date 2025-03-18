@@ -1,0 +1,40 @@
+post:
+  tags:
+    - WIP Friends
+  summary: Resolve Friend Request
+  description: Resolve incoming pending friend request.
+  operationId: resolve-friend-request
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            friendId:
+              type: string
+              $ref: '../components/schemas/UserId.yaml'
+            isAccepted:
+              type: boolean
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/getUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

@@ -1,0 +1,115 @@
+get:
+  tags:
+    - WIP Excursions
+  summary: Get Excursion By Id
+  description: Return a new excursion object with a matching id.
+  operationId: getExcursionById
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ExcursionId.yaml'
+      required: true
+      description: The id of the excursion object.
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/createExcursion/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+patch:
+  tags:
+    - WIP Excursions
+  summary: Update Excursion
+  description: Update an excursion object with a matching id.
+  operationId: updateExcursion
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ExcursionId.yaml'
+      required: true
+      description: The id of the excursion object.
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/excursion/updateExcursion/Request.yaml'
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/createExcursion/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    400:
+      $ref: '../components/responses/400BadRequest.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
+
+delete:
+  tags:
+    - WIP Excursions
+  summary: Delete Excursion
+  description: Delete an excursion object with a matching id.
+  operationId: deleteExcursion
+
+  security:
+  - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ExcursionId.yaml'
+      required: true
+      description: The id of the excursion object.
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/createExcursion/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'

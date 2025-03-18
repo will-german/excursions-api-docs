@@ -1,0 +1,8 @@
+user:
+  id: 67d75fdeb5e9f677795522ec
+  email: user@joe.com
+  firstName: User
+  lastName: Joe
+  userName: userjoe
+  excursions: []
+  completedExcursions: []

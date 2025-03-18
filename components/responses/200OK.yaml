@@ -1,0 +1,11 @@
+description: OK
+
+content:
+  application/json:
+    schema:
+      $ref: "../schemas/Response.yaml"
+
+    examples:
+      "Unauthorized":
+        value:
+          $ref: '../../examples/responses/200OK.yaml'

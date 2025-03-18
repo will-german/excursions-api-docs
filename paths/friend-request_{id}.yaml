@@ -1,0 +1,34 @@
+delete:
+  tags:
+    - WIP Friends
+  summary: Delete Friend Request
+  description: Delete an outgoing pending friend request.
+  operationId: delete-friend-request
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: friendId
+      schema:
+        type: string
+        $ref: '../components/schemas/UserId.yaml'
+      required: true
+      description: The id of the User object.
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/user/getUser/Response.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/CreateUser.yaml'
+    401:
+      $ref: '../components/responses/401Unauthorized.yaml'
+    500:
+      $ref: '../components/responses/500InternalServerError.yaml'
