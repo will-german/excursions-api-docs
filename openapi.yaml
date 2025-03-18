@@ -4,7 +4,7 @@ info:
   version: v0.1.0
   title: Excursions API
   description: |
-    An excursion travel planner. Good luck implementing this trash. You'll need it. 🤕
+    A lightweight group travel planning app. Good luck implementing this. You're gonna need it.
     
   license:
     name: GNU Affero General Public License v3.0 (or later)
