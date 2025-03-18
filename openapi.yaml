@@ -11,7 +11,7 @@ info:
     identifier: AGPL-3.0-or-later
 
 servers:
-  - url: 'https://excursions-api.com/api/v1'
+  - url: 'https://excursions-api-server.azurewebsites.net'
 
 components:
   securitySchemes:
