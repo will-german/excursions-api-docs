@@ -1,0 +1,12 @@
+description: Bad Request
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "Bad Request":
+        value:
+          code: 400
+          message: "Bad Request"

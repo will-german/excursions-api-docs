@@ -1,0 +1,19 @@
+type: object
+description: A friend request between two users.
+
+properties:
+  id:
+    $ref: './ID.yaml'
+  sender:
+    description: The request sender's User Id.
+    $ref: './ID.yaml'
+  receiver:
+    description: The request receiver's User Id.
+    $ref: './ID.yaml'
+  status:
+    type: string
+    enum:
+      - "pending"
+      - "accepted"
+      - "declined"
+    default: pending

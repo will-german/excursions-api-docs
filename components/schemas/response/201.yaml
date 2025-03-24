@@ -1,0 +1,12 @@
+description: Created
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "Created":
+        value:
+          code: 201
+          message: "Created"

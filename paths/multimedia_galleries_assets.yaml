@@ -1,0 +1,72 @@
+get:
+  tags:
+  - Multimedia
+  summary: Get Gallery Assets
+  description: Retrieve gallery assets by unique asset id, or gallery id, etc.
+  operationId: get-multimedia-galleries-assets
+
+  parameters:
+    - in: query
+      name: id
+      description: The unique identifier of an asset within a gallery.
+      schema:
+        $ref: '../UUID.yaml'
+      required: false
+
+    - in: query
+      name: galleryId
+      description: The unique identifier for a gallery.
+      schema:
+        $ref: '../UUID.yaml'
+      required: false
+
+    - in: query
+      name: parkCode
+      description: A comma delimited list of park codes (each 4-10 characters in length).
+      schema:
+        type: string
+      required: false
+
+    - in: query
+      name: stateCode
+      description: A comma delimited list of 2 character state codes.
+      schema:
+        type: string
+      required: false
+
+    - in: query
+      name: limit
+      description: Number of results to return per request.
+      schema:
+        type: int32
+      required: true
+
+    - in: query
+      name: start
+      description: Get the next [limit] results starting with this number. Default is 0.
+      schema:
+        type: int32
+      required: false
+
+    - in: query
+      name: q
+      description: Term to search on.
+      schema:
+        type: string
+      required: false
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/nps/Asset.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/multimedia_galleries_assets_get.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

@@ -1,0 +1,68 @@
+get:
+  tags:
+  - Multimedia
+  summary: Get Videos
+  description: Retrieve metadata relating to videos created by national parks.
+  operationId: get-multimedia-videos
+
+  parameters:
+    - in: query
+      name: parkCode
+      description: A comma delimited list of park codes (each 4-10 characters in length).
+      schema:
+        type: string
+      required: false
+
+    - in: query
+      name: stateCode
+      description: A comma delimited list of 2 character state codes.
+      schema:
+        type: string
+      required: false
+
+    - in: query
+      name: limit
+      description: Number of results to return per request.
+      schema:
+        type: number
+        format: int32
+      required: true
+
+    - in: query
+      name: start
+      description: Get the next [limit] results starting with this number.
+      schema:
+        type: number
+        format: int32
+      required: false
+
+    - in: query
+      name: q
+      description: Term to search on.
+      schema:
+        type: string
+      required: false
+
+    # TODO: Implement
+
+    # - in: query
+    #   name: sort
+    #   schema:
+    #     type: string
+    #   required: false
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/nps/Video.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/multimedia_videos_get.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

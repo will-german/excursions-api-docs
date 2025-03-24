@@ -1,0 +1,12 @@
+description: Forbidden
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "Forbidden":
+        value:
+          code: 403
+          message: "Forbidden"

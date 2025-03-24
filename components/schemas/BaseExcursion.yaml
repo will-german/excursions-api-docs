@@ -1,0 +1,23 @@
+type: object
+description: A generic Excursion object.
+
+properties:
+  name:
+    $ref: './Name.yaml'
+  description:
+    type: string
+    description: A short description about this Excursion.
+  host:
+    $ref: './ID.yaml'
+    description: The Id of the User who created this Excursion.
+  participants:
+    type: array
+    description: An array of User Ids.
+    items:
+      $ref: './ID.yaml'
+  trips:
+    type: array
+    description: An array of Trip Ids.
+    items:
+      type: object
+      # $ref: './Trip.yaml'

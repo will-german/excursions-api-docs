@@ -1,5 +1,0 @@
-type: string
-description: |
-    JSON Web Token
-scheme: bearer
-bearerFormat: JWT

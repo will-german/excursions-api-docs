@@ -1,0 +1,12 @@
+allOf:
+  - $ref: '../BaseNationalPark.yaml'
+
+  - type: object
+    properties:
+      id:
+        $ref: '../UUID.yaml'
+      states:
+        type: string
+        description: A comma delimited lists of states that this park resides in.
+        minLength: 2
+

@@ -1,0 +1,47 @@
+description: A user object.
+allOf:
+  - $ref: '../BaseUser.yaml'
+  - type: object
+
+    properties:
+      _id:
+        $ref: '../ID.yaml'
+
+      friends:
+        type: array
+        description: IDs of this user's friends.
+        items:
+          $ref: '../ID.yaml'
+
+      outgoingFriendRequests:
+        type: array
+        description: IDs of friend requests sent to other users.
+        items:
+          $ref: '../ID.yaml'
+
+      incomingFriendRequests:
+        type: array
+        description: IDs of friend requests sent to this user.
+        items:
+          $ref: '../ID.yaml'
+
+      hostedExcursions:
+        type: array
+        description: IDs of excursions created where this user is the host.
+        items:
+          $ref: '../ID.yaml'
+
+      sharedExcursions:
+        type: array
+        description: IDs of excursions created where this user is a participant.
+        items:
+          $ref: '../ID.yaml'
+
+      completedExcursions:
+        type: array
+        description: Ids of excursions this user has completed.
+        items:
+          $ref: '../ID.yaml'
+
+
+

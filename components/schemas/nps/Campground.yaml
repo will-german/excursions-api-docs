@@ -1,0 +1,204 @@
+type: object
+description: A Campground object.
+
+properties:
+  id:
+    $ref: '../UUID.yaml'
+  url:
+    $ref: '../URL.yaml'
+  name:
+    $ref: '../Name.yaml'
+  parkCode:
+    type: string
+    description: null
+    minLength: 4
+    maxLength: 10
+  description:
+    type: string
+    description: A short description about this campground.
+  latitude:
+    type: string
+    description: The latitude coordinate of this location.
+  longitude:
+    type: string
+    description: The longitude coordinate of this location.
+  latLong:
+    type: string
+    description: Combined latitude and longitude coordinates of this location.
+  audioDescription:
+    type: string
+    description: Text to be used for an audio description of this campground.
+  isPassportStampLocation:
+  passportStampLocationDescription:
+  passportStampImages:
+  geometryPoiId:
+    $ref: '../UUID.yaml'
+  reservationInfo:
+    type: string
+  reservationUrl:
+    $ref: '../URL.yaml'
+  regulationsurl:
+    $ref: '../URL.yaml'
+  regulationsOverview:
+    type: string
+  amenities:
+    type: object
+    properties:
+      trashRecyclingCollection:
+        type: string
+      toilets:
+        type: array
+        items:
+          type: string
+      internetConnectivity:
+        type: string
+      showers:
+        type: array
+        items:
+          type: string
+      cellPhoneReception:
+        type: string
+      laundry:
+        type: string
+      amphitheater:
+        type: string
+      dumpStation:
+        type: string
+      campStore:
+        type: string
+      staffOrVolunteerHostOnsite:
+        type: string
+      potableWater:
+        type: array
+        items:
+          type: string
+      iceAvailableForSale:
+        type: string
+      firewoodForSale:
+        type: string
+      foodStorageLockers:
+        type: string
+  contacts:
+    type: array
+    items:
+      anyOf:
+      - $ref: '../PhoneNumber.yaml'
+      - $ref: '../Email.yaml'
+  fees:
+    type: array
+    items:
+      $ref: './Fee.yaml'
+  directionsInfo:
+    type: string
+  directionsUrl:
+    $ref: '../URL.yaml'
+  operatingHours:
+    type: array
+    items:
+      $ref: './OperatingHours.yaml'
+  addresses:
+    type: array
+    items:
+      $ref: './Address.yaml'
+  images:
+    type: array
+    items:
+      $ref: './Image.yaml'
+  weatherOverview:
+    type: string
+  numberOfSitesReservable:
+    type: number
+  numberOfSitesFirstComeFirstServe:
+    type: number
+  campsites:
+    type: object
+    properties:
+      totalSites:
+        type: number
+        format: int32
+        minimum: 0
+      group:
+        type: number
+        format: int32
+        minimum: 0
+      horse:
+        type: number
+        format: int32
+        minimum: 0
+      tentOnly:
+        type: number
+        format: int32
+        minimum: 0
+      electricalHookups:
+        type: number
+        format: int32
+        minimum: 0
+      rvOnly:
+        type: number
+        format: int32
+        minimum: 0
+      walkBoatTo:
+        type: number
+        format: int32
+        minimum: 0
+      other:
+        type: number
+        format: int32
+        minimum: 0
+  accessibility:
+    type: array
+    items:
+      type: object
+      properties:
+        wheelchairAccess:
+          type: string
+        internetInfo:
+          type: string
+        cellPhoneInfo:
+          type: string
+        fireStovePolicy:
+          type: string
+        rvAllowed:
+          type: string
+          format: int32
+          enum:
+            - "0"
+            - "1"
+        rvInfo:
+          type: string
+        rvMaxLength:
+          type: string
+          format: int32
+          minimum: 0
+        additionalInfo:
+          tyep: string
+        trailerMaxLength:
+          type: string
+          format: int32
+          minimum: 0
+        adaInfo:
+          type: string
+        trailerAllowed:
+          type: string
+          format: int32
+          enum:
+            - "0"
+            - "1"
+        accessRoads:
+          type: array
+          items:
+            type: string
+        classifications:
+          type: array
+          items:
+            type: string
+  multimedia:
+    type: array
+    items:
+      $ref: './Multimedia.yaml'
+  relevanceScore:
+    type: number
+    minimum: 0
+    maximum: 1
+  lastIndexedDate:
+    type: string

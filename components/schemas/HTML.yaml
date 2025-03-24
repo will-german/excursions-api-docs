@@ -1,0 +1,6 @@
+type: string
+description: A string of HTML.
+content:
+  text/html:
+    schema:
+      type: string

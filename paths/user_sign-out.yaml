@@ -1,0 +1,19 @@
+post:
+  tags:
+    - User Authentication
+  summary: Sign Out
+  description: Verify user and revoke bearer token.
+  operationId: sign-user-out
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      $ref: '../components/schemas/response/200.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

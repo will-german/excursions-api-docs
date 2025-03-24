@@ -1,0 +1,155 @@
+type: object
+description: null
+
+properties:
+  id:
+    $ref: '../UUID.yaml'
+  url:
+    $ref: '../URL.yaml'
+  title:
+    $ref: '../Title.yaml'
+  shortDescription:
+    type: string
+  images:
+    type: array
+    items:
+      $ref: './Image.yaml'
+  relatedParks:
+    type: array
+    items:
+      type: object
+      properties:
+        states:
+          type: string
+          description: A comma delimited listed of 2 character state codes.
+        parkCode:
+          type: string
+          description: null
+          minLength: 4
+          maxLength: 10
+        designation:
+          type: string
+        fullName:
+          $ref: '../Name.yaml'
+        url:
+          $ref: '../URL.yaml'
+        name:
+          $ref: '../Name.yaml'
+  relatedOrganizations:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          $ref: '../UUID.yaml'
+        url:
+          $ref: '../URL.yaml'
+        name:
+          $ref: '../Name.yaml'
+  tags:
+    type: array
+    items:
+      type: string
+  latitude:
+    type: string
+    description: The latitude coordinate of this location.
+  longitude:
+    type: string
+    description: The longitude coordinate of this location.
+  geometryPoiId:
+    $ref: '../UUID.yaml'
+  amenities:
+    type: array
+  location:
+    type: string
+  seasonDescription:
+    type: string
+  accessibilityInformation:
+    $ref: '../HTML.yaml'
+  isReservationRequired:
+    type: string
+    enum:
+      - "true"
+      - "false"
+  ageDescription:
+    type: string
+  petsDescription:
+    $ref: '../HTML.yaml'
+  timeOfDayDescription:
+    $ref: '../HTML.yaml'
+  feeDescription:
+    $ref: '../HTML.yaml'
+  age:
+    type: string
+    format: int32
+    minimum: 0
+  arePetsPermittedWithRestrictions:
+    type: string
+    enum:
+      - "true"
+      - "false"
+  activities:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          $ref: '../UUID.yaml'
+        name:
+          $ref: '../Name.yaml'
+  activityDescription:
+    $ref: '../HTML.yaml'
+  locationDescription:
+    $ref: '../HTML.yaml'
+  doFeesApply:
+    type: string
+    enum:
+      - "true"
+      - "false"
+  longDescription:
+    $ref: '../HTML.yaml'
+  reservationDescription:
+    $ref: '../HTML.yaml'
+  season:
+    type: array
+    items:
+      type: string
+      enum:
+        - Winter
+        - Spring
+        - Summer
+        - Fall
+  topics:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          $ref: '../UUID.yaml'
+        name:
+          $ref: '../Name.yaml'
+  durationDescription:
+    type: string
+    description: Some strings returned may contain HTML.
+  arePetsPermitted:
+    type: string
+    enum:
+      - "true"
+      - "false"
+  timeOfDay:
+    type: array
+    items:
+      type: string
+      enum:
+        - "Day"
+        - "Night"
+        - "Dawn"
+        - "Dusk"
+  duration:
+    type: string
+  credit:
+    type: string
+  relevanceScore:
+    type: number
+    minimum: 0
+    maximum: 1

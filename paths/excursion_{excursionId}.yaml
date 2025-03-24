@@ -1,0 +1,118 @@
+get:
+  tags:
+    - NOT AVAILABLE Excursions
+  summary: Get Excursion By Id
+  description: Return a new excursion object with a matching id.
+  operationId: get-excursion-by-id
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Excursion.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'
+
+patch:
+  tags:
+    - NOT AVAILABLE Excursions
+  summary: Update Excursion
+  description: Update an excursion object with a matching id.
+  operationId: patch-excursion-by-id
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          allOf:
+          - $ref: '../components/schemas/BaseExcursion.yaml'
+
+          - type: object
+            properties:
+              isComplete:
+                type: boolean
+                default: false
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Excursion.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'
+
+delete:
+  tags:
+    - NOT AVAILABLE Excursions
+  summary: Delete Excursion
+  description: Delete an excursion object with a matching id.
+  operationId: delete-excursion-by-id
+
+  security:
+  - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Excursion.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

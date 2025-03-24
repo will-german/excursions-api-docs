@@ -1,9 +1,9 @@
 post:
   tags:
     - NOT AVAILABLE Friends
-  summary: Resolve Friend Request
-  description: Resolve incoming pending friend request.
-  operationId: resolve-friend-request
+  summary: Handle Friend Request
+  description: Handle incoming pending friend request.
+  operationId: handle-friend-request
 
   security:
     - BearerToken: []
@@ -14,27 +14,28 @@ post:
       application/json:
         schema:
           type: object
+
+          required:
+            - requestId
+            - userId
+            - isAccepted
+          
           properties:
-            friendId:
-              type: string
-              $ref: '../components/schemas/UserId.yaml'
+            requestId:
+              $ref: '../components/schemas/ID.yaml'
+              description: The Id of this friend request.
+            userId:
+              $ref: '../components/schemas/ID.yaml'
+              description: The Id of the User updating this friend request.
             isAccepted:
               type: boolean
 
   responses:
     200:
-      description: OK
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/user/getUser/Response.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/user/CreateUser.yaml'
+      $ref: '../components/schemas/response/200.yaml'
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     401:
-      $ref: '../components/responses/401Unauthorized.yaml'
+      $ref: '../components/schemas/response/401.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'

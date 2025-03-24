@@ -1,0 +1,12 @@
+description: Not Found
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "Not Found":
+        value:
+          code: 404
+          message: "Not Found"

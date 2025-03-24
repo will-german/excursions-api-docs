@@ -1,0 +1,12 @@
+description: OK
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "OK":
+        value:
+          code: 200
+          message: "OK"

@@ -1,5 +1,5 @@
 type: string
 description: The name of an object, field, property, etc.
-minLength: 1,
-maxLength: 64,
-example: Joe
+minLength: 1
+maxLength: 128
+example: "Sample Name"

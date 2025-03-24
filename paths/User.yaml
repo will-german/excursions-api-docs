@@ -3,14 +3,28 @@ post:
     - User Management
   summary: Create User
   description: Return a new user with a bearer token.
-  operationId: createUser
+  operationId: create-user
 
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/user/createUser/Request.yaml'
+          description: Field requirements to create a New User object.
+          allOf:
+            - $ref: '../components/schemas/BaseUser.yaml'
+            
+            - type: object
+              required:
+              - userName
+              - firstName
+              - lastName
+              - email
+              - password
+
+              properties:
+                password:
+                  $ref: '../components/schemas/Password.yaml'
 
   responses:
     201:
@@ -18,22 +32,27 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user/createUser/Response.yaml'
+            type: object
+            properties:
+              user:
+                $ref: '../components/schemas/user/User.yaml'
+              token:
+                $ref: '../components/schemas/BearerToken.yaml'
           examples:
             "Example":
               value:
-                $ref: '../examples/user/CreateUser.yaml'
+                $ref: '../examples/user/User.yaml'
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'
 
 get:
   tags:
     - User Management
   summary: Get User
   description: Return a user object.
-  operationId: getUser
+  operationId: get-user
 
   security:
     - BearerToken: []
@@ -44,17 +63,20 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user/getUser/Response.yaml'
+            type: object
+            properties:
+              user:
+                $ref: '../components/schemas/user/User.yaml'
           examples:
             "Example":
               value:
-                $ref: '../examples/user/GetUser.yaml'
+                $ref: '../examples/user/User.yaml'
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     401:
-      $ref: '../components/responses/401Unauthorized.yaml'
+      $ref: '../components/schemas/response/401.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'
 
 
 patch:
@@ -62,7 +84,7 @@ patch:
     - User Management
   summary: Update User
   description: Return an updated user object.
-  operationId: updateUser
+  operationId: update-user
 
   security:
     - BearerToken: []
@@ -72,7 +94,47 @@ patch:
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/user/updateUser/Request.yaml'
+          description: An updated user object.
+          allOf:
+            - $ref: '../components/schemas/BaseUser.yaml'
+            
+            - type: object
+              properties:
+                friends:
+                  type: array
+                  description: IDs of this user's friends.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                outgoingFriendRequests:
+                  type: array
+                  description: IDs of friend requests sent to other users.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                incomingFriendRequests:
+                  type: array
+                  description: IDs of friend requests sent to this user.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                hostedExcursions:
+                  type: array
+                  description: IDs of excursions created where this user is the host.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                sharedExcursions:
+                  type: array
+                  description: IDs of excursions created where this user is a participant.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                completedExcursions:
+                  type: array
+                  description: Ids of excursions this user has completed.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'  
 
   responses:
     200:
@@ -80,24 +142,28 @@ patch:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user/updateUser/Response.yaml'
+            type: object
+            properties:
+              user:
+                description: An updated user object.
+                $ref: '../components/schemas/user/User.yaml'
           examples:
             "Example":
               value:
-                $ref: '../examples/updateUser/userjoe.yaml'
+                $ref: '../examples/user/User.yaml'
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     401:
-      $ref: '../components/responses/401Unauthorized.yaml'
+      $ref: '../components/schemas/response/401.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'
 
 delete:
   tags:
     - User Management
   summary: Delete User
   description: Return a deleted user object.
-  operationId: deleteUser
+  operationId: delete-user
 
   security:
     - BearerToken: []
@@ -108,10 +174,14 @@ delete:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user/deleteUser/Response.yaml'
+            type: object
+            properties:
+              user:
+                description: The deleted user object.
+                $ref: '../components/schemas/user/User.yaml'
           examples:
             "Example":
               value:
-                $ref: '../examples/deleteUser/deletedJoeUser.yaml'
+                $ref: '../examples/user/User.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'

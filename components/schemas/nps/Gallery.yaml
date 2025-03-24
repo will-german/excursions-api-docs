@@ -1,0 +1,54 @@
+type: object
+description: A multimedia gallery object.
+
+properties:
+  id:
+    $ref: '../UUID.yaml'
+  url:
+    $ref: '../URL.yaml'
+  title:
+    $ref: '../Title.yaml'
+  description:
+    type: string
+  images:
+    type: array
+    items:
+      $ref: './Image.yaml'
+  relatedParks:
+    type: array
+    items:
+      type: object
+      properties:
+        states:
+          type: string
+          description: A comma delimited list of 2 character state codes.
+        parkCode:
+          type: string
+          description: null
+          minLength: 4
+          maxLength: 10
+        designation:
+          type: string
+        fullName:
+          $ref: '../Name.yaml'
+        url:
+          $ref: '../URL.yaml'
+        name:
+          $ref: '../Name.yaml'
+  tags:
+    type: array
+    items:
+      type: string
+  assetCount:
+    type: number
+    format: int32
+    minimum: 0
+  constraintsInfo:
+    type: object
+    properties:
+      constraint:
+        type: string
+      grantingRights:
+        type: string
+  copyright:
+    type: string

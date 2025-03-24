@@ -1,0 +1,14 @@
+type: object
+
+properties:
+  exceptions:
+    type: array
+  description:
+    type: string
+  standardHours:
+    type: object
+    properties:
+      dayOfWeek:
+        type: string
+  name:
+    $ref: '../Name.yaml'

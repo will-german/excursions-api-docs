@@ -1,0 +1,10 @@
+type: object
+# description:
+
+properties:
+  id:
+    $ref: '../UUID.yaml'
+  name:
+    $ref: '../Name.yaml'
+
+    type: object 

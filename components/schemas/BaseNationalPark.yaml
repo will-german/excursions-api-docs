@@ -1,0 +1,22 @@
+type: object
+description: A National Park object.
+
+properties:
+  url:
+    $ref: './URL.yaml'
+  fullName:
+    $ref: './Name.yaml'
+  description:
+    type: string
+    description: A short description about this park.
+  parkCode:
+    type: string
+    description: null
+    minLength: 4
+    maxLength: 10
+  stateCode:
+    type: string
+    description: null
+    minLength: 2
+    maxLength: 2
+  

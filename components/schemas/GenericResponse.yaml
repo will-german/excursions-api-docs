@@ -1,0 +1,13 @@
+type: object
+description: A generic HTTP response.
+
+properties:
+  code:
+    type: integer
+    minLength: 3
+    maxLength: 3
+
+  message:
+    type: string
+    minLength: 1
+    maxLength: 256

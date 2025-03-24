@@ -1,0 +1,53 @@
+type: object
+description: A multimedia audio object.
+
+properties:
+  callToActionUrl:
+    $ref: '../URL.yaml'
+  permalinkUrl:
+    $ref: '../URL.yaml'
+  latitude: 
+    type: number
+  callToAction:
+    type: string
+  longitude: 
+    type: number
+  geometryPoiId:
+    $ref: '../UUID.yaml'
+  splashImage:
+    type: object
+    properties:
+      url:
+        $ref: '../URL.yaml'
+  transcript:
+    type: string
+  title:
+    $ref: '../Title.yaml'
+  tags:
+    type: array
+    items:
+      type: string
+  credit:
+    type: string
+  durationMs:
+    type: number
+    format: int32
+  id:
+    $ref: '../UUID.yaml'
+  versions:
+    type: object
+    properties:
+      fileSize:
+        type: number
+        format: int32
+        minimum: 0
+      fileType:
+        type: string
+      url:
+        $ref: '../URL.yaml'
+  description:
+    type: string
+  relatedParks:
+    type: array
+    items:
+      type: string

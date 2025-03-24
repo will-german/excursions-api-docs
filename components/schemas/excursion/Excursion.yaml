@@ -1,0 +1,19 @@
+allOf:
+  - $ref: '../BaseExcursion.yaml'
+  
+  - type: object
+
+    properties:
+      id:
+        $ref: '../ID.yaml'
+      isComplete:
+        type: boolean
+        default: false
+      createdAt:
+        type: string
+        format: date
+        description: The date when this Excursion was created.
+      updatedAt:
+        type: string
+        format: date
+        description: The date when this Excursion was last updated.

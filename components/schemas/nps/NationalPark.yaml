@@ -1,0 +1,74 @@
+allOf:
+  - $ref: '../BaseNationalPark.yaml'
+
+  - type: object
+    properties:
+      id:
+        $ref: '../UUID.yaml'
+      latitude:
+        type: string
+        description: The latitude coordinate of this location.
+      longitude:
+        type: string
+        description: The longitude coordinate of this location.
+      latLong:
+        type: string
+        description: Combined latitude and longitude coordinates of this location.
+      activities:
+        type: array
+        items:
+          $ref: './Activity.yaml'
+      topics:
+        type: array
+        items:
+          $ref: './Topic.yaml'
+      states:
+        type: string
+        description: A comma delimited lists of states that this park resides in.
+        minLength: 2
+      contacts:
+        type: array
+        items:
+          anyOf:
+          - $ref: '../PhoneNumber.yaml'
+          - $ref: '../Email.yaml'
+      entranceFees:
+        type: array
+        items:
+          $ref: './EntranceFee.yaml'
+      entrancePasses:
+        type: array
+        items:
+          $ref: './EntrancePass.yaml'
+      fees:
+        type: array
+        items:
+          $ref: './Fee.yaml'
+      directionsInfo:
+        type: string
+      directionsUrl:
+        $ref: '../URL.yaml'
+      operatingHours:
+        type: array
+        items:
+          $ref: './OperatingHours.yaml'
+      addresses:
+        type: array
+        items:
+          $ref: './Address.yaml'
+      images:
+        type: array
+        items:
+          $ref: './Image.yaml'
+      weatherInfo:
+        type: string
+      name:
+        $ref: '../Name.yaml'
+      multimedia:
+        type: array
+        items:
+          $ref: './Multimedia.yaml'
+      relevanceScore:
+        type: number
+        minimum: 0
+        maximum: 1

@@ -1,0 +1,43 @@
+post:
+  tags:
+    - User Authentication
+  summary: Sign In
+  description: Verify credentials and grant a bearer token.
+  operationId: sign-user-in
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              $ref: '../components/schemas/Email.yaml'
+            password:
+              $ref: '../components/schemas/Password.yaml'
+
+          required:
+            - email
+            - password
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              user:
+                $ref: '../components/schemas/user/User.yaml'
+              token:
+                $ref: '../components/schemas/BearerToken.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/User.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

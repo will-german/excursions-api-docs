@@ -1,0 +1,12 @@
+description: Unauthorized
+
+content:
+  text/plain:
+    schema:
+      $ref: '../GenericResponse.yaml'
+
+    examples:
+      "Unauthorized":
+        value:
+          code: 401
+          message: "Unauthorized"

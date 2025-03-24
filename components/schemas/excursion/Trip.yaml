@@ -1,0 +1,13 @@
+allOf:
+  - $ref: '../BaseTrip.yaml'
+
+  - type: object
+    properties:
+      id:
+        $ref: '../ID.yaml'
+      createdAt:
+        type: string
+        format: date
+      updatedAt:
+        type: string
+        format: date

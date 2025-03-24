@@ -1,0 +1,76 @@
+type: object
+description: A multimedia video object.
+
+properties:
+  callToActionUrl:
+    $ref: '../URL.yaml'
+  audioDescribedBuiltIn:
+    type: boolean
+  descriptiveTranscript:
+    $ref: '../HTML.yaml'
+  permalinkUrl:
+    $ref: '../URL.yaml'
+  audiodescription:
+  audioDescriptionUrl:
+  latitude: 
+    type: number
+  aslVideoUrl:
+  callToAction:
+  longitude: 
+    type: number
+  captionFiles:
+    type: array
+    items:
+      type: object
+      properties:
+        language:
+          type: string
+        fileType:
+          type: string
+        url:
+          $ref: '../URL.yaml'
+  hasOpenCaptions:
+    type: boolean
+  geometryPoiId:
+    $ref: '../UUID.yaml'
+  splashImage:
+    type: object
+    properties:
+      url:
+        $ref: '../URL.yaml'
+  isBRoll:
+    type: boolean
+  transcript:
+    type: string
+  title:
+    $ref: '../Title.yaml'
+  tags:
+    type: array
+    items:
+      type: string
+  credit:
+    type: string
+  durationMs:
+    type: number
+    format: int32
+  id:
+    $ref: '../UUID.yaml'
+  versions:
+    type: object
+    properties:
+      fileSize:
+        type: number
+        format: int32
+        minimum: 0
+      fileType:
+        type: string
+      url:
+        $ref: '../URL.yaml'
+  description:
+    type: string
+  isVideoOnly:
+    type: boolean
+  relatedParks:
+    type: array
+    items:
+      type: string

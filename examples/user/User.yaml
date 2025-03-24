@@ -1,0 +1,11 @@
+id: 67d75fdeb5e9f677795522ec
+email: joe@user.com
+firstName: Joe
+lastName: User
+userName: joeuser
+friends: ["60d72b2f9fd4a2f8d85c3e20"]
+outgoingFriendRequests: ["60c72b2f9fd4a2f8d85c3e10", "61a72b2f9fd4a2f8d85c3e12",]
+incomingFriendRequests: []
+hostedExcursions: ["60c72b2f9fd4a2f8d85c3e24",]
+sharedExcursions: ["60e72b2f9fd4a2f8d85c3e30", "60a72b2f9fd4a2f8d85c3e11",]
+completedExcursions: []

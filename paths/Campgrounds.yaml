@@ -1,8 +1,8 @@
 get:
   tags:
-    - National Park Service
+    - Park Details
   summary: Get Campgrounds
-  description: Return an array of campgrounds.
+  description: Retrieve data about National Park Service campgrounds including addresses, contacts, description, hours of operation, etc.
   operationId: getCampgrounds
 
   security:
@@ -58,14 +58,14 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/NPSResponse.yaml'
+            $ref: '../components/schemas/nps/Campground.yaml'
           examples:
             "Example":
               value:
                 $ref: '../examples/nps/GetCampgrounds.yaml'
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     401:
-      $ref: '../components/responses/401Unauthorized.yaml'
+      $ref: '../components/schemas/response/401.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'

@@ -3,7 +3,7 @@ post:
     - NOT AVAILABLE Friends
   summary: Add Friend
   description: Create and send a friend request.
-  operationId: add-friend
+  operationId: create-friend-request
 
   security:
     - BearerToken: []
@@ -14,10 +14,13 @@ post:
       application/json:
         schema:
           type: object
+
+          required:
+            - friendId
+
           properties:
             friendId:
-              type: string
-              $ref: '../components/schemas/UserId.yaml'
+              $ref: '../components/schemas/ID.yaml'
 
   responses:
     201:
@@ -25,14 +28,13 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/user/getUser/Response.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/user/CreateUser.yaml'
+            $ref: '../components/schemas/FriendRequest.yaml'
+          # examples:
+          #   "Example":
+          #     value:
     400:
-      $ref: '../components/responses/400BadRequest.yaml'
+      $ref: '../components/schemas/response/400.yaml'
     401:
-      $ref: '../components/responses/401Unauthorized.yaml'
+      $ref: '../components/schemas/response/401.yaml'
     500:
-      $ref: '../components/responses/500InternalServerError.yaml'
+      $ref: '../components/schemas/response/500.yaml'

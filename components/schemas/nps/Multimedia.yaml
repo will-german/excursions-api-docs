@@ -1,0 +1,12 @@
+type: object
+description: Multimedia for a given park.
+
+properties:
+  id:
+    $ref: '../UUID.yaml'
+  title:
+    $ref: '../Title.yaml'
+  type:
+    type: string
+  url:
+    $ref: '../URL.yaml'

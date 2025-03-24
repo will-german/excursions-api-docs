@@ -1,0 +1,13 @@
+type: object
+description: An image for a given park.
+
+properties:
+  credit:
+  title:
+    $ref: '../Title.yaml'
+  altText:
+    type: string
+  caption:
+    type: string
+  url:
+    $ref: '../URL.yaml'

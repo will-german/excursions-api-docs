@@ -1,0 +1,84 @@
+[
+  {
+    "total": "9375",
+    "data": [
+      {
+        "id": "CA91ADBF-BCE3-4434-B3D6-7691D7347758",
+        "permalinkUrl": "https://www.nps.gov/media/video/view.htm?id=CA91ADBF-BCE3-4434-B3D6-7691D7347758",
+        "title": "Cowboy Gives Tour of Family Homestead",
+        "description": "Find out what homesteading means to this cowboy.",
+        "descriptiveTranscript": "<p>Two video clips showing a prairie dog standing alert above and within its burrow in a windy grassland environment.</p>",
+        "splashImage": {
+          "url": ""
+        },
+        "relatedParks": [
+          {
+            "states": "NM,TX",
+            "parkCode": "bisc",
+            "designation": "National Park",
+            "fullName": "Biscayne National Park",
+            "url": "https://www.nps.gov/bisc/index.htm",
+            "name": "Biscayne"
+          }
+        ],
+        "tags": [
+          "Biscayne",
+          "national",
+          "park",
+          "introduction",
+          "underwater",
+          "Shipwreck",
+          "ocean",
+          "miami",
+          "homestead",
+          "south",
+          "Florida",
+          "fl",
+          "FLA",
+          "dive",
+          "history",
+          "podcast",
+          "video",
+          "astrid",
+          "rybeck",
+          "bnp",
+          "bisc"
+        ],
+        "latitude": 25.4829769134522,
+        "longitude": -80.2179336547852,
+        "audiodescription": "string",
+        "audioDescriptionUrl": "string",
+        "aslVideoUrl": "https://www.nps.gov/nps-audiovideo/audiovideo/94c690d6-676c-4c74-8b69-8c488f9240af.mp4",
+        "geometryPoiId": "string",
+        "durationMs": 263000,
+        "credit": "Thomas M. Strom",
+        "transcript": "Hi! I'm Park Ranger Astrid Rybeck and together we'll explore the six shipwrecks that make up Biscayne National Park's Maritime Heritage Trail. Each ship tells a different story, and contributes to the maritime history that is unique to Biscayne National Park. Ships of all nationalities and all sizes have navigated these waters. Let's talk about Biscayne's natural features which were so vital in shaping the human history of Biscayne National Park. The park has four different ecosystems that all work together: a mangrove shoreline, the crystal clear waters of Biscayne Bay, the northern portion of the Florida Keys, and the northern portion of the shallow Florida coral reef. It is the beauty and the wealth of these natural features that have drawn people to this area for over 10,000 years. From homesteaders to millionaires, to native people and pirates, these natural features have shaped the stories of the people who have called Biscayne home. The outer waters of the park have long been a 'superhighway' for marine trade and commerce. The northward flowing Gulf Stream has, and continues to, carry goods, ideas, and cultures around the tip of Florida to ports all around the world. While many ships made it safely to their destinations, many others did not. A combination of perfectly occurring natural features in the eastern waters of Biscayne National Park was often fatal for sailing ships. Whether headed north or south, sailing captains had to battle easterly winds, shallow reefs, uncharted waters, and strong currents. The waters of Biscayne National Park now safeguard the ghosts of over 400 years of maritime traffic. Park scientists have identified over fifty shipwrecks in the park. But while the identities of some of these have been uncovered, many still hold secrets. From Spanish galleons to English man of wars, from modern cruisers to unknown remnants of events long since forgotten, Biscayne National Park's Maritime Heritage Trail serves to literally submerge visitors into history. Come see how a 19th-century wooden sailing ship left only ballast stones behind as a clue to its identity. Explore \"Lugano,\" which at one time was the largest ship ever to have wrecked upon the shallow reef patches. Divers can enjoy exploring \"Arratoon Apcar,\" a ship that slammed into the reef only a few hundred yards away from horrified men building a lighthouse to warn vessels away from that very spot. Snorkelers will marvel at the ruins of \"Mandalay,\" the most recent wreck on the Trail. The wreck of \"Erl King\" represents a major transition from ships powered by sail to ships powered by steam. History will open up with the remains of \"Alicia,\" one of the last big ships to be salvaged by traditional 'Keys Wreckers',. Each of the shipwrecks on the trail tells a unique story. Most of them lie in about 20 feet of water giving experienced divers and first time snorkelers the opportunity to view these magnificent pieces of history while ensuring that the ship's remains will be around for many years of exploration and enjoyment. Each site has permanent mooring balls installed, so private boaters can discover the wrecks without having to worry about dropping an anchor onto the wrecks or the fragile ecosystems that surround them. You can help protect the stories and the futures of all of these ships by remembering that these six sites, like all of the archeological sites in Biscayne National Park, are part of our shared heritage. Leave the sites as you find them. Please take only pictures and leave only bubbles. Dive into history and discover the stories behind the shipwrecks of Biscayne's Maritime Heritage Trail.",
+        "callToAction": "",
+        "callToActionURL": "",
+        "audioDescribedBuiltIn": false,
+        "hasOpenCaptions": false,
+        "isBRoll": false,
+        "isVideoOnly": false,
+        "captionFiles": [
+          {
+            "language": "english",
+            "fileType": "text/vtt",
+            "url": "https://www.nps.gov/nps-audiovideo/closed-caption/5E069AB9-EE15-33B2-27A194C84A61BCBE.vtt"
+          }
+        ],
+        "versions": [
+          {
+            "fileSizeKb": 10012,
+            "fileType": "video/mp4",
+            "aspectRatio": 1.778,
+            "heightPixels": 360,
+            "url": "https://www.nps.gov/nps-audiovideo/audiovideo/f0f43726-f2b5-4492-b11c-9e89a13527d9360p.mp4",
+            "widthPixels": 640
+          }
+        ]
+      }
+    ],
+    "limit": "50",
+    "start": "0"
+  }
+]

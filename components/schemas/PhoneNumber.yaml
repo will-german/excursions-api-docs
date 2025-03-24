@@ -1,0 +1,15 @@
+type: object
+# description: 
+
+properties:
+  phoneNumber:
+    type: string
+    minLength: 10
+    maxLength: 10
+  description:
+    type: string
+  extension:
+    type: string
+  type:
+    type: string
+    enum: [Voice, Fax, TTY]

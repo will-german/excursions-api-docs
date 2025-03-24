@@ -1,0 +1,42 @@
+type: object
+description: A generic trip object.
+
+properties:
+  name:
+    $ref: './Name.yaml'
+  description:
+    type: string
+    description: A short description about this Trip.
+  excursionId:
+    $ref: './ID.yaml'
+  park:
+    type: object 
+    properties:
+      name:
+        type: string
+        $ref: './Name.yaml'
+      code:
+        type: string
+        minLength: 4
+        maxLength: 10
+  campground:
+    type: object
+    properties:
+      id:
+        $ref: './ID.yaml'
+      name:
+        type: string
+        $ref: './Name.yaml'
+  thingstodo:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          $ref: './ID.yaml'
+  startDate:
+    type: string
+    format: date
+  endDate:
+    type: string
+    format: date
