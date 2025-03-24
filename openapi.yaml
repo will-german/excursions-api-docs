@@ -25,7 +25,7 @@ tags:
     description: Manage the authentication status of a user.
   - name: Park Details
     description: Retrieve detailed data about national parks from the NPS API.
-  - name: Multimedia
+  - name: NOT AVAILABLE Multimedia
     description: Access media data about national parks from the NPS API.
 
 x-tagGroups:
@@ -37,7 +37,7 @@ x-tagGroups:
   - name: National Park Service
     tags:
       - Park Details
-      - Multimedia
+      - NOT AVAILABLE Multimedia
 
   - name: Excursions
     tags:

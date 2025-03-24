@@ -1,6 +1,6 @@
 get:
   tags:
-  - Multimedia
+  - NOT AVAILABLE Multimedia
   summary: Get Galleries
   description: Retrieve galleries created by national parks and other NPS entities.
   operationId: get-multimedia-galleries

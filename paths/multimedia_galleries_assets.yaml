@@ -1,6 +1,6 @@
 get:
   tags:
-  - Multimedia
+  - NOT AVAILABLE Multimedia
   summary: Get Gallery Assets
   description: Retrieve gallery assets by unique asset id, or gallery id, etc.
   operationId: get-multimedia-galleries-assets
