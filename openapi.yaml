@@ -47,7 +47,7 @@ x-tagGroups:
   - name: Social
     tags:
       - NOT AVAILABLE Friends
-      - NOT AVAILABLE Sharing Excursions
+      # - NOT AVAILABLE Sharing Excursions
 
 paths:
   # --- Users --- #
@@ -90,7 +90,7 @@ paths:
     $ref: './paths/friend.yaml'
   "/friend/{friendId}":
     $ref: './paths/friend_{friendId}.yaml'
-  "/friend-request/":
+  "/friend-request":
     $ref: './paths/friend-request.yaml'
   "/friend-request/{friendId}":
     $ref: './paths/friend-request_{friendId}.yaml'

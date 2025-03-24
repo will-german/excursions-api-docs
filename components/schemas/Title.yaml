@@ -1,4 +1,4 @@
 type: string
 description: The title of an object, field, property, etc.
-minLength: 1,
-maxLength: 128,
+minLength: 1
+maxLength: 128

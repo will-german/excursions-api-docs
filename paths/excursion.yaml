@@ -31,9 +31,9 @@ post:
         application/json:
           schema:
             $ref: '../components/schemas/excursion/Excursion.yaml'
-          examples:
-            "Example":
-              value:
+          # examples:
+          #   "Example":
+          #     value:
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

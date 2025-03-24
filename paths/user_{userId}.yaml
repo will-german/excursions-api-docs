@@ -10,7 +10,7 @@ get:
 
   parameters:
     - in: path
-      name: userID
+      name: userId
       schema:
         type: string
         $ref: '../components/schemas/ID.yaml'

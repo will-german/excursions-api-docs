@@ -3,6 +3,7 @@ description: An image for a given park.
 
 properties:
   credit:
+    type: string
   title:
     $ref: '../Title.yaml'
   altText:

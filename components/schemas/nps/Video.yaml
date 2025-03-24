@@ -11,11 +11,15 @@ properties:
   permalinkUrl:
     $ref: '../URL.yaml'
   audiodescription:
+    type: string
   audioDescriptionUrl:
+    $ref: '../URL.yaml'
   latitude: 
     type: number
   aslVideoUrl:
+    $ref: '../URL.yaml'
   callToAction:
+    type: string
   longitude: 
     type: number
   captionFiles:

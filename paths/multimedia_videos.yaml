@@ -5,6 +5,8 @@ get:
   description: Retrieve metadata relating to videos created by national parks.
   operationId: get-multimedia-videos
 
+  security: []
+
   parameters:
     - in: query
       name: parkCode
@@ -60,7 +62,6 @@ get:
             $ref: '../components/schemas/nps/Video.yaml'
           examples:
             "Example":
-              value:
                 $ref: '../examples/multimedia_videos_get.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'

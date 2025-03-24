@@ -5,6 +5,8 @@ get:
   description: Retrieve gallery assets by unique asset id, or gallery id, etc.
   operationId: get-multimedia-galleries-assets
 
+  security: []
+
   parameters:
     - in: query
       name: id
@@ -38,14 +40,16 @@ get:
       name: limit
       description: Number of results to return per request.
       schema:
-        type: int32
+        type: number
+        format: int32
       required: true
 
     - in: query
       name: start
       description: Get the next [limit] results starting with this number. Default is 0.
       schema:
-        type: int32
+        type: number
+        format: int32
       required: false
 
     - in: query
@@ -64,7 +68,6 @@ get:
             $ref: '../components/schemas/nps/Asset.yaml'
           examples:
             "Example":
-              value:
                 $ref: '../examples/multimedia_galleries_assets_get.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'

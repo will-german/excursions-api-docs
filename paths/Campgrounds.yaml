@@ -3,7 +3,7 @@ get:
     - Park Details
   summary: Get Campgrounds
   description: Retrieve data about National Park Service campgrounds including addresses, contacts, description, hours of operation, etc.
-  operationId: getCampgrounds
+  operationId: get-campgrounds
 
   security:
     - BearerToken: []
@@ -13,35 +13,37 @@ get:
       name: parkCode
       description: A comma delimited list of park codes (each 4-10 characters in length).
       schema:
-        type: String
+        type: string
       required: false
 
     - in: query
       name: stateCode
       description: A comma delimited list of 2 character state codes.
       schema:
-        type: String
+        type: string
       required: false
 
     - in: query
       name: limit
       description: Number of results to return per request.
       schema:
-        type: Integer
+        type: number
+        format: int32
       required: true
 
     - in: query
       name: start
       description: Get the next [limit] results starting with this number.
       schema:
-        type: Integer
+        type: number
+        format: int32
       required: false
 
     - in: query
       name: q
       description: Term to search on.
       schema:
-        type: String
+        type: string
       required: false
 
     # TODO: Implement
@@ -59,10 +61,8 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/nps/Campground.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/nps/GetCampgrounds.yaml'
+          # examples:
+          #   "Example":
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

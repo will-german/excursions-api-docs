@@ -35,7 +35,6 @@ post:
                 $ref: '../components/schemas/BearerToken.yaml'
           examples:
             "Example":
-              value:
                 $ref: '../examples/user/User.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'

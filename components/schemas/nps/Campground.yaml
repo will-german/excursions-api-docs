@@ -10,7 +10,7 @@ properties:
     $ref: '../Name.yaml'
   parkCode:
     type: string
-    description: null
+    description: "A comma delimited list of park codes (each 4-10 characters in length)."
     minLength: 4
     maxLength: 10
   description:
@@ -29,8 +29,14 @@ properties:
     type: string
     description: Text to be used for an audio description of this campground.
   isPassportStampLocation:
+    type: string
+    # NEED UPDATED
   passportStampLocationDescription:
+    type: string
+    # NEED UPDATED
   passportStampImages:
+    type: string
+    # NEED UPDATED
   geometryPoiId:
     $ref: '../UUID.yaml'
   reservationInfo:
