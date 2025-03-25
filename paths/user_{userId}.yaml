@@ -1,7 +1,7 @@
 get:
   tags:
     - User Management
-  summary: N/A Get User By ID
+  summary: Get User By ID
   description: Return a user object with a matching Id.
   operationId: get-user-by-id
 

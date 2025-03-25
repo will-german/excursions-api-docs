@@ -1,6 +1,6 @@
 get:
   tags:
-  - NOT AVAILABLE Multimedia
+  - Multimedia
   summary: Get Audio
   description: Retrieve metadata relating to audio files created by national parks.
   operationId: get-multimedia-audio

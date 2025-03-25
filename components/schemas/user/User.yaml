@@ -43,5 +43,11 @@ allOf:
         items:
           $ref: '../ID.yaml'
 
+      hostedTrips:
+        type: array
+        description: IDs of trips created where this user is the host.
+        items:
+          $ref: '../ID.yaml'
+
 
 

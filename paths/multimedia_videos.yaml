@@ -1,6 +1,6 @@
 get:
   tags:
-  - NOT AVAILABLE Multimedia
+  - Multimedia
   summary: Get Videos
   description: Retrieve metadata relating to videos created by national parks.
   operationId: get-multimedia-videos
