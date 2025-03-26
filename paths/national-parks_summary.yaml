@@ -64,7 +64,7 @@ get:
           examples:
             "Example":
               value:
-                $ref: '../examples/nps/GetNationalParks.yaml'
+                $ref: '../examples/get_national-parks_summary.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

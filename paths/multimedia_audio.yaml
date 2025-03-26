@@ -62,7 +62,8 @@ get:
             $ref: '../components/schemas/nps/Audio.yaml'
           examples:
             "Example":
-                $ref: '../examples/multimedia_audio_get.yaml'
+              value:
+                $ref: '../examples/get_multimedia_audio.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     500:

@@ -67,8 +67,10 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/nps/ThingsToDo.yaml'
-          # examples:
-          #   "Example":
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/get_things-to-do.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

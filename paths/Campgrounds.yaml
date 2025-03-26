@@ -61,8 +61,10 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/nps/Campground.yaml'
-          # examples:
-          #   "Example":
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/get_campgrounds.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

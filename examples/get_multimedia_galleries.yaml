@@ -1,0 +1,38 @@
+{
+    "total": "9765",
+    "limit": "1",
+    "start": "0",
+    "data": [
+        {
+            "id": "95485C50-9B68-92FD-D5A9-42C60A84CC66",
+            "url": "https://www.nps.gov/media/photo/gallery.htm?id=95485C50-9B68-92FD-D5A9-42C60A84CC66",
+            "title": "Campsite Amenities",
+            "description": "Voyageurs National Park maintains several amenities at each campsite to provide comfort and convenience for your camping experience. Examples of these amenities are provided here with brief descriptions. Please check the specific site for the list of amenities provided.",
+            "images": [
+                {
+                    "url": "https://www.nps.gov/npgallery/GetAsset/9557FF40-FB48-8550-F8FB-878932A8C6FB",
+                    "altText": "Campsite Amenities",
+                    "title": "Privy",
+                    "description": "A privy is an outdoor toilet with a large storage tank located in the ground below it. Please do not place anything other than toilet paper in this tank. All garbage must be packed out."
+                }
+            ],
+            "relatedParks": [
+                {
+                    "states": "MN",
+                    "parkCode": "voya",
+                    "designation": "National Park",
+                    "fullName": "Voyageurs National Park",
+                    "url": "https://www.nps.gov/voya/index.htm",
+                    "name": "Voyageurs"
+                }
+            ],
+            "tags": [],
+            "assetCount": 6,
+            "constraintsInfo": {
+                "constraint": "Public domain",
+                "grantingRights": "Unknown"
+            },
+            "copyright": "Permission must be secured from the individual copyright owners to reproduce any copyrighted materials contained within this website. Digital assets without any copyright restrictions are public domain."
+        }
+    ]
+}

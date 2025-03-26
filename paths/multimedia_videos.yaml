@@ -62,7 +62,8 @@ get:
             $ref: '../components/schemas/nps/Video.yaml'
           examples:
             "Example":
-                $ref: '../examples/multimedia_videos_get.yaml'
+              value:
+                $ref: '../examples/get_multimedia_videos.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     500:

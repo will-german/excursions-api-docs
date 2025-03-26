@@ -1,0 +1,86 @@
+{
+    "total": "3468",
+    "limit": "1",
+    "start": "0",
+    "data": [
+        {
+            "id": "D4DBE55F-165F-428B-A65E-5A1131AEB11A",
+            "url": "https://www.nps.gov/thingstodo/port-oneida-fair.htm",
+            "title": "Port Oneida Fair",
+            "shortDescription": "Step back in time at the Port Oneida Fair and experience life as it was in the late 1850's through the early 1940's.",
+            "images": [
+                {
+                    "url": "https://www.nps.gov/common/uploads/cropped_image/5C41B47A-DD3D-859F-A5A16D600E46E570.jpg",
+                    "credit": "NPS",
+                    "altText": "A horse team pulls a wagon of people on a wagon ride.",
+                    "title": "Port Oneida Fair",
+                    "description": "",
+                    "caption": "Take a ride back in time at the Port Oneida Fair.",
+                    "crops": [
+                        {
+                            "aspectRatio": "1.78",
+                            "url": "https://www.nps.gov/common/uploads/cropped_image/primary/5C41B47A-DD3D-859F-A5A16D600E46E570.jpg"
+                        },
+                        {
+                            "aspectRatio": "1",
+                            "url": "https://www.nps.gov/common/uploads/cropped_image/secondary/5C41B47A-DD3D-859F-A5A16D600E46E570.jpg"
+                        }
+                    ]
+                }
+            ],
+            "relatedParks": [
+                {
+                    "states": "MI",
+                    "parkCode": "slbe",
+                    "designation": "National Lakeshore",
+                    "fullName": "Sleeping Bear Dunes National Lakeshore",
+                    "url": "https://www.nps.gov/slbe/index.htm",
+                    "name": "Sleeping Bear Dunes"
+                }
+            ],
+            "relatedOrganizations": [],
+            "tags": [
+                "Port Oneida",
+                "Port Oneida Fair"
+            ],
+            "latitude": "44.936178",
+            "longitude": "-85.94081599999998",
+            "geometryPoiId": "6b56c3f5-e2ed-4c05-bb93-0d1b4211eea3",
+            "amenities": [],
+            "location": "Port Oneida Fair",
+            "seasonDescription": "",
+            "accessibilityInformation": "<strong>Parking</strong><br /> All four parking lots have handicap parking.<br /> <br /> <strong>Shuttle</strong><br /> A wheelchair accessible shuttle departs from the Dechow Farm approximately every 15 minutes. This shuttle will make stops at the Kelderhouse and Burfiend Farms. Those wanting to visit the Olsen and Thoreson Farms using the accessible shuttle should speak with the National Park Service Ranger at the entrance to the Dechow Farm.<br /> <br /> <strong>Restroom</strong><br /> An ADA restroom is available at the Dechow Farm.<br /> <br /> <strong>Terrain</strong><br /> Fair activities take place on mostly flat terrain. The activites are set up on mowed lawns where tree roots or uneven ground may be present.",
+            "isReservationRequired": "false",
+            "ageDescription": "",
+            "petsDescription": "Pets are welcome in outdoor areas on a six-foot leash. Pets are not allowed inside historic buildings.",
+            "timeOfDayDescription": "10 am - 4 pm Friday and Saturday<br /> Plan to spend at least 2 hours at the fair.",
+            "feeDescription": "Please display a Sleeping Bear Dunes National Lakeshore or other federal lands pass in your vehicle.",
+            "age": "",
+            "arePetsPermittedWithRestrictions": "false",
+            "activities": [
+                {
+                    "id": "FAED7F97-3474-4C21-AB42-FB0768A2F826",
+                    "name": "Cultural Demonstrations"
+                }
+            ],
+            "activityDescription": "<h2>Activities by location</h2> <h4>Dechow Farm</h4> <p><strong>Activities and demostrations:</strong><br /> Dechow Family history <br /> Horse and wagon rides<br /> Horse teams working fields<br /> Donkeys and farm animals<br /> Friends of Sleeping Bear Dunes<br /> Northwest Michigan Invasive Species Network - Friday only<br /> Antique bicycles and single engine motor display<br /> Hand weaving, rug weaving, basketmaking, hand spun wool<br /> Vintage masonry glass jar history<br /> Wind-up musical instruments<br /> “The Past in Present Time” Living history barn tours<br /> Historic Sleeping Bear Preservation 2023 poster sales<br /> Traverse City Model A Club auto display<br /> Goats, conservation grazing, and goat milk soap making<br /> Maple Grove Cemetery display<br /> Native seeds information<br /> Chair caning<br /> Hand coloring historic photographs<br /> <br /> <strong>Food:</strong><br /> Schwenk’inWagon - lunch and Saturday breakfast<br /> Moomers’ Ice Cream</p> <h4>Kelderhouse Farm</h4> <p><strong>Activities and demonstrations:</strong><br /> Kelderhouse Family history by Kelderhouse descendants<br /> Maritime history and 1931 Ford Model A<br /> Apples with Leelanau Conservation District - Friday only</p> <h4>Olsen Farm</h4> <p><strong>Music:</strong><br /> Dulcimer music<br /> Hammer’d – dulcimer group - Saturday only at 2:15 pm<br /> <br /> <strong>Activites and demonstrations:</strong><br /> Rug hooking and tattling, penny rug making, rug braiding<br /> Life of a Lighthouse Keeper – on the hour, 10 am -3 pm<br /> Quilt sewing and hand sewing<br /> Old Tyme Photography selfie station<br /> Port Oneida History and Olsen Barn Tours<br /> Historic building preservation station<br /> Historic cooking and bread and butter churning<br /> Composting<br /> Fair artist poster signing - Saturday only<br /> Fishing and fish of the Great Lakes<br /> Vegetable and flower garden - potato and corn planting<br /> Children’s lawn games and washtub demo<br /> <br /> <strong>Food:</strong><br /> Cherry Republic Ice Cream</p> <h4>Port Oneida School House</h4> <p><strong>Activities and demonstrations:</strong><br /> 11 am & 2 pm - School Days in a One Room Schoolhouse</p> <h4><strong>Thoreson Farm</strong></h4> <p><strong>Music:</strong><br /> Norm Wheeler & Pat Niemesto in the barn<br /> <br /> <strong>Activites and demonstrations:</strong><br /> Thoreson family tales and history with Leonard Thoreson<br /> Coiled pine needles, crocheted doilies<br /> Shaker boxes, french rolling pins,  and vintage sewing<br /> Spinning wheel yarn spinning, knitting, and crocheting<br /> Thrown pottery<br /> Blacksmith in action<br /> Basket weaving, quilting, rag rug twining<br /> <br />  </p>",
+            "locationDescription": "August 9 & 10, 2024<br /> <br /> Parking lots are availabe at:<br /> <br /> Port Oneida Farms Heritage Center - Olsen House<br /> Dechow Farm<br /> Thoreson Farm<br /> <br /> A shuttle and mowed walking paths are available between sites.<br />  ",
+            "doFeesApply": "false",
+            "longDescription": "<p>Step back in time at the Port Oneida Fair and experience life as it was from the 1850's and early 1940's. Imagine the life of Euro-American immigrants as you help bale hay or watch a broom-maker at work. Learn about spinning, basket weaving, soap making, butter making, candle dipping, and fur trapping. Listen as park rangers and local historians share the area's history. Watch as teams of oxen haul hay and artists and craftsmen demonstrate their skills.</p> <p>The fair is held at five of the historic farmsteads in Port Oneida. Each farm has a variety of artists, crafts, food, and activities for visitors scroll below to see what is happening at each of them. A shuttle bus runs between the farms on a regular schedule during the fair, so you can park your car and easily get around to the different venues.<br /> <br /> The Port Oneida Fair is presented by Sleeping Bear Dunes National Lakeshore in partnership with Preserve Historic Sleeping Bear. To learn more about how you can help support the park, visit <a href=\"http://www.phsb.org/\">www.phsb.org</a>.</p> <h2>August 8 & 9, 2025<br /> 10 am - 4 pm</h2> <h2>Getting around</h2> <p>See site map at the bottom of the page.</p> <h4>Shuttle</h4> <p>Park your car at one of the three parking lots (Olsen, Dechow, Thoreson Farms).<br /> A free shuttle stops at each site approximately every 15 minutes.</p> <h4>On foot</h4> Walking paths connect all the farm sites. <br /> To reach the Thoreson Farm, expect an hour walk on the Bay View Trail.<br /> Parking is also available at Thoreson Farm. <h4>Horse and wagon</h4> <p>Take a horse and wagon ride between the Olsen and Dechow Farms.</p> <h2>Activites by location: </h2> <h3>Dechow Farm</h3> <b>Activities and demonstrations:</b><br /> Horse and Wagon Rides, Horse teams working fields<br /> Early American Michigan cricket 10-4 (Friday only)<br /> Paul Dechow - Family History<br /> Mrs. Dechow leads tours of the Barn “The Past in Present Time”<br /> Goats and Conservation Grazing<br /> Donkeys<br /> Farm animals<br /> Moomers’ Calves in the Barn Stalls, Milking Parlor tours<br /> Friends of Sleeping Bear Dunes—Information<br /> Preserve Historic Sleeping Bear – 2024 Poster Sales and Donation Can<br /> NPS Interpretation – Natural and cultural history, education<br /> Summer Internship Display<br /> Northwest Michigan Invasive Species Network<br /> Antique Bicycles<br /> Model A Vehicle<br /> Single Engine Motors<br /> Hand Weaving and Basket Making<br /> Rug Weaving<br /> Wind-up musical instruments - Empire Area Museum<br /> Goat Milk Soap Making<br /> Hand Spun Wool<br /> Felting and knitting<br /> Pottery and Glass Jewelry<br /> Hand Crafted, USDA Organic, All Natural Ingredient Soaps, Lip Balms, Body Butter<br /> Hand Coloring Historic Sleeping Bear Dunes Photographs<br /> Pottery, Fused Glass, Maple Syrup and Honey<br /> Sleeping Bear Teen Media<br /> <br /> <b>Food:</b><br /> Schwenk’inWagon - lunch, Saturday breakfast<br /> Moomers’ Ice Cream <h3>Thoreson Farm</h3> <h4>Music:</h4> <p>Rigs & Jeels - Traditional fiddle & mandolin 11-4 (Friday only)<br /> North Bay Celtic Band - Traditional Irish & American tunes 10-4 (Saturday only)</p> <h4>Activites and demonstrations:</h4> <p>Rope Making activity<br /> Coiled pine needles and crocheted doilies<br /> Shaker boxes & French rolling pins<br /> Thrown pottery<br /> Knitting and crocheting<br /> Blacksmiths<br /> Rag rug twining<br /> Basket weaving<br /> Basket weaving with found natural materials<br /> Traditional timber framing</p> <h4><strong><a href=\"https://www.nps.gov/planyourvisit/event-details.htm?id=11D060EF-0AFB-8EA5-550E6E472A56018C\">Star Party</a></strong><b><strong>,</strong> 9-11 pm, Saturday August 10</b></h4> <h3>Kelderhouse Farm</h3> <h4>Activities and demonstrations:</h4> <p>Kelderhouse family history presented by Thomas P. Kelderhouse descendants<br /> Postal Service History of Port Oneida by the Leelanau Historical Society<br /> Wreck of the Rising Sun by the Leelanau Historical Society<br /> 1931 Ford Model A by the Leelanau Historical Society<br /> Leelanau County Historic Preservation Society stewards of The Poor Farm Barn<br /> Revitalizing the historic apple orchard presented by Leelanau Conservation District<br /> “Stations of the Storm” hands-on activities of the U.S. Life-Saving Service<br /> Portraits of the Past - Kelderhouse Port Oneida Cemetery</p> <h3>Olsen Farm</h3> <h4>Music:</h4> <p>Musicians and storytelling – Norm Wheeler and Pat Niemesto<br /> Dulcimer music<br /> Hammer’d – dulcimer group - Saturday only at 2:15 pm</p> <h4>Activites and demonstrations:</h4> <p>Olsen Barn Tours<br /> Root cellar open<br /> Old Tyme Photography – selfies in costume in barn<br /> Tom VanZoeren – oral history recording; his books; Port Oneida History<br /> Children’s Lawn Games – Hoops, Graces, potato spoon, burlap sack, box hockey, croquet, bean bag<br /> 2024 Port Oneida Poster Artist - poster sales and signing<br /> Farm life/City Life (Friday only)<br /> Flax and Linen – (Friday only)<br /> Spinning and wool types – (Saturday only)<br /> Washtub demonstration<br /> Soap making and herbs<br /> Tatting, rug hooking<br /> Penny Rug Making<br /> Rug Braiding<br /> Sewing/patching/show quilt - (Friday only)<br /> Hand quilting<br /> Preservation Station - food preservation using traditional methods<br /> Cooking /food-ways<br /> Stamping<br /> Bread and butter making<br /> Composting<br /> Fishing<br /> Vegetable and Flower Gardening<br /> <br /> <b>Food:</b><br /> Cherry Republic Ice Cream</p> <h3>Port Oneida School House</h3> <h4>Activities and demonstrations:</h4> <p>11 am - 2 pm - School Days in the one-room schoolhouse</p>",
+            "reservationDescription": "",
+            "season": [],
+            "topics": [
+                {
+                    "id": "1F833C99-A75D-4F9E-9256-B96523485466",
+                    "name": "Farming and Agriculture"
+                }
+            ],
+            "durationDescription": "10 am - 4 pm Friday and Saturday<br /> Plan to spend at least 2 hours at the fair.",
+            "arePetsPermitted": "true",
+            "timeOfDay": [],
+            "duration": "",
+            "credit": "",
+            "relevanceScore": 1
+        }
+    ]
+}
