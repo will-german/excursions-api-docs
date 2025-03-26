@@ -1,40 +1,58 @@
 {
-    "total": "4745",
+    "total": "10051",
     "limit": "1",
     "start": "0",
     "data": [
         {
-            "id": "08BE7BC6-58D0-4C2E-98B3-BA5B6D539DD5",
-            "permalinkUrl": "https://www.nps.gov/media/video/view.htm?id=08BE7BC6-58D0-4C2E-98B3-BA5B6D539DD5",
-            "title": "\"Melusina Calls to the Loon\" by Libby Meyer",
-            "description": "For Violin and Chamber Orchestra with The Keweenaw Symphony Orchestra, Cori Somers, violin – Recorded at the Rozsa Center for the Performing Arts, Houghton, MI (2002).",
+            "id": "4CA31BE6-BB6C-47CB-88AA-080B2BCEE3A1",
+            "permalinkUrl": "https://www.nps.gov/media/video/view.htm?id=4CA31BE6-BB6C-47CB-88AA-080B2BCEE3A1",
+            "title": "\"It is but simple justice\": Frederick Douglass & Women's Rights",
+            "description": "In celebration of Women's History Month, join us as we explore the complicated relationship of Frederick Douglass with key leaders of the Women’s Rights Movement.",
             "splashImage": {
-                "url": ""
+                "url": "https://www.nps.gov/nps-audiovideo/thumbnail/234498ee-824e-49f4-ade6-b20b2fa1277b.jpg"
             },
             "relatedParks": [
                 {
-                    "states": "MI",
-                    "parkCode": "isro",
-                    "designation": "National Park",
-                    "fullName": "Isle Royale National Park",
-                    "url": "https://www.nps.gov/isro/index.htm",
-                    "name": "Isle Royale"
+                    "states": "DC",
+                    "parkCode": "frdo",
+                    "designation": "National Historic Site",
+                    "fullName": "Frederick Douglass National Historic Site",
+                    "url": "https://www.nps.gov/frdo/index.htm",
+                    "name": "Frederick Douglass"
                 }
             ],
             "tags": [],
-            "latitude": 47.12186050415039,
-            "longitude": -88.57002258300781,
+            "latitude": null,
+            "longitude": null,
+            "audioDescription": "",
+            "audioDescriptionUrl": "",
+            "aslVideoUrl": "",
             "geometryPoiId": "",
-            "durationMs": 711000,
-            "credit": "Composed by Libby Meyer",
+            "durationMs": 2774985,
+            "credit": "Kevin Bryant",
             "transcript": "",
+            "descriptiveTranscript": "",
             "callToAction": "",
             "callToActionUrl": "",
+            "audioDescribedBuiltIn": false,
+            "hasOpenCaptions": false,
+            "isVideoOnly": false,
+            "isBRoll": false,
+            "captionFiles": [
+                {
+                    "language": "english",
+                    "fileType": "text/vtt",
+                    "url": "https://www.nps.gov/nps-audiovideo/closed-caption/5A3801B8-BC16-8D7D-45ED398CC9FDC888.vtt"
+                }
+            ],
             "versions": [
                 {
-                    "fileSize": 0,
-                    "fileType": "audio/mp3",
-                    "url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/mwr/avElement/isro-ISROAIR1999MeyerMelusinaCallstotheLoon.mp3"
+                    "fileSizeKb": 96370,
+                    "fileType": "video/mp4",
+                    "aspectRatio": 1.778,
+                    "heightPixels": 360,
+                    "url": "https://www.nps.gov/nps-audiovideo/audiovideo/234498ee-824e-49f4-ade6-b20b2fa1277b360p.mp4",
+                    "widthPixels": 640
                 }
             ]
         }

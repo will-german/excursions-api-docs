@@ -1,42 +1,34 @@
 {
-    "total": "4745",
+    "total": "186713",
     "limit": "1",
     "start": "0",
     "data": [
         {
-            "id": "08BE7BC6-58D0-4C2E-98B3-BA5B6D539DD5",
-            "permalinkUrl": "https://www.nps.gov/media/video/view.htm?id=08BE7BC6-58D0-4C2E-98B3-BA5B6D539DD5",
-            "title": "\"Melusina Calls to the Loon\" by Libby Meyer",
-            "description": "For Violin and Chamber Orchestra with The Keweenaw Symphony Orchestra, Cori Somers, violin – Recorded at the Rozsa Center for the Performing Arts, Houghton, MI (2002).",
-            "splashImage": {
-                "url": ""
+            "id": "00CB6F4D-1DD8-B71B-0B5A-44C7863AC5DE",
+            "permalinkUrl": "https://www.nps.gov/media/photo/gallery-item.htm?pg=1&id=00CB6F4D-1DD8-B71B-0B5A-44C7863AC5DE&gid=000E06C0-1DD8-B71B-0B6A-086522D77950",
+            "title": "USS Nevada",
+            "description": "USS Nevada entering drydock #2 at Pearl Harbor, Feb 18, 1942.",
+            "altText": "USS Nevada",
+            "fileInfo": {
+                "url": "https://www.nps.gov/npgallery/GetAsset/00CB6F4D-1DD8-B71B-0B5A-44C7863AC5DE",
+                "fileType": "image/jpeg",
+                "widthPixels": 3114,
+                "heightPixels": 2538,
+                "fileSizeKb": 937196
             },
-            "relatedParks": [
-                {
-                    "states": "MI",
-                    "parkCode": "isro",
-                    "designation": "National Park",
-                    "fullName": "Isle Royale National Park",
-                    "url": "https://www.nps.gov/isro/index.htm",
-                    "name": "Isle Royale"
-                }
+            "relatedParks": [],
+            "tags": [
+                "uss nevada",
+                "pearl harbor",
+                "pearl harbor attack"
             ],
-            "tags": [],
-            "latitude": 47.12186050415039,
-            "longitude": -88.57002258300781,
-            "geometryPoiId": "",
-            "durationMs": 711000,
-            "credit": "Composed by Libby Meyer",
-            "transcript": "",
-            "callToAction": "",
-            "callToActionUrl": "",
-            "versions": [
-                {
-                    "fileSize": 0,
-                    "fileType": "audio/mp3",
-                    "url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/mwr/avElement/isro-ISROAIR1999MeyerMelusinaCallstotheLoon.mp3"
-                }
-            ]
+            "credit": "",
+            "constraintsInfo": {
+                "constraint": "Public domain",
+                "grantingRights": "Full"
+            },
+            "copyright": "Permission must be secured from the individual copyright owners to reproduce any copyrighted materials contained within this website. Digital assets without any copyright restrictions are public domain.",
+            "ordinal": 1
         }
     ]
 }
