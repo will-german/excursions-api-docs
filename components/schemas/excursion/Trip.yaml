@@ -1,13 +1,15 @@
 allOf:
-  - $ref: '../BaseTrip.yaml'
+  - $ref: '../base/Trip.yaml'
 
   - type: object
     properties:
-      id:
+      _id:
+        $ref: '../ID.yaml'
+      host:
         $ref: '../ID.yaml'
       createdAt:
         type: string
-        format: date
+        format: date-time
       updatedAt:
         type: string
-        format: date
+        format: date-time

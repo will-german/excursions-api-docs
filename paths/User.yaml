@@ -80,7 +80,6 @@ get:
     500:
       $ref: '../components/schemas/response/500.yaml'
 
-
 patch:
   tags:
     - User Management
@@ -96,47 +95,14 @@ patch:
     content:
       application/json:
         schema:
-          description: An updated user object.
+          description: Fields that may be updated on the User object by the Client.
           allOf:
             - $ref: '../components/schemas/BaseUser.yaml'
             
             - type: object
               properties:
-                friends:
-                  type: array
-                  description: IDs of this user's friends.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'
-
-                outgoingFriendRequests:
-                  type: array
-                  description: IDs of friend requests sent to other users.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'
-
-                incomingFriendRequests:
-                  type: array
-                  description: IDs of friend requests sent to this user.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'
-
-                hostedExcursions:
-                  type: array
-                  description: IDs of excursions created where this user is the host.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'
-
-                sharedExcursions:
-                  type: array
-                  description: IDs of excursions created where this user is a participant.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'
-
-                completedExcursions:
-                  type: array
-                  description: Ids of excursions this user has completed.
-                  items:
-                    $ref: '../components/schemas/ID.yaml'  
+                password:
+                  $ref: '../components/schemas/Password.yaml'
 
   responses:
     200:

@@ -3,7 +3,7 @@ description: A generic Excursion object.
 
 properties:
   name:
-    $ref: './Name.yaml'
+    $ref: '../Name.yaml'
   description:
     type: string
     description: A short description about this Excursion.

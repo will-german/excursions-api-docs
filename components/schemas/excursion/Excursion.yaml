@@ -4,8 +4,21 @@ allOf:
   - type: object
 
     properties:
-      id:
+      _id:
         $ref: '../ID.yaml'
+      host:
+        $ref: '../ID.yaml'
+        description: The Id of the User who created this Excursion.
+      participants:
+        type: array
+        description: An array of User Ids.
+        items:
+          $ref: '../ID.yaml'
+      trips:
+        type: array
+        description: An array of Trip Ids.
+        items:
+          $ref: '../ID.yaml'
       isComplete:
         type: boolean
         default: false

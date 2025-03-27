@@ -1,0 +1,17 @@
+type: object
+description: A generic trip object.
+
+properties:
+  name:
+    $ref: '../Name.yaml'
+  description:
+    type: string
+    description: A short description about this Trip.
+  startDate:
+    type: string
+    format: date-time
+    description: ISO8601 format.
+  endDate:
+    type: string
+    format: date-time
+    description: ISO8601 format.

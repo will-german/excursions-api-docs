@@ -26,7 +26,13 @@ get:
             type: object
             properties:
               user:
-                $ref: '../components/schemas/user/User.yaml'
+                allOf:
+                  - $ref: '../components/schemas/base/User.yaml'
+
+                  - type: object
+                    properties:
+                      _id:
+                        $ref: '../components/schemas/ID.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

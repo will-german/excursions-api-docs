@@ -3,10 +3,9 @@ description: Not Found
 content:
   text/plain:
     schema:
-      $ref: '../GenericResponse.yaml'
+      $ref: '../base/Response.yaml'
 
     examples:
       "Not Found":
         value:
-          code: 404
-          message: "Not Found"
+          "404 Not Found"

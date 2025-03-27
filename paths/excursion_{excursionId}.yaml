@@ -36,7 +36,7 @@ get:
 patch:
   tags:
     - NOT AVAILABLE Excursions
-  summary: Update Excursion
+  summary: Update Excursion By Id
   description: Update an excursion object with a matching id.
   operationId: patch-excursion-by-id
 
@@ -57,7 +57,7 @@ patch:
       application/json:
         schema:
           allOf:
-          - $ref: '../components/schemas/BaseExcursion.yaml'
+          - $ref: '../components/schemas/base/Excursion.yaml'
 
           - type: object
             properties:
@@ -85,7 +85,7 @@ patch:
 delete:
   tags:
     - NOT AVAILABLE Excursions
-  summary: Delete Excursion
+  summary: Delete Excursion By Id
   description: Delete an excursion object with a matching id.
   operationId: delete-excursion-by-id
 

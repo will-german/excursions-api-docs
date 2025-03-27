@@ -1,0 +1,48 @@
+get:
+  tags:
+    - User Management
+  summary: Get Users
+  description: Return a list of user objects.
+  operationId: get-users
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: query
+      name: keywords
+      description: Comma delimited list of terms to search on.
+      schema:
+        type: array
+        items:
+          type: string
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              description: A limited user object designed for public use.
+              properties:
+                _id:
+                  $ref: '../components/schemas/ID.yaml'
+                userName:
+                  $ref: '../components/schemas/Name.yaml'
+                firstName:
+                  $ref: '../components/schemas/Name.yaml'
+                lastName:
+                  $ref: '../components/schemas/Name.yaml'
+          examples:
+            "Example":
+              value:
+                $ref: '../examples/user/User.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

@@ -1,9 +1,10 @@
-type: object
+type: http
 description: A generic HTTP response.
 
 properties:
   code:
-    type: integer
+    type: number
+    format: int32
     minLength: 3
     maxLength: 3
 

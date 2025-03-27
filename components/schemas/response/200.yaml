@@ -3,10 +3,9 @@ description: OK
 content:
   text/plain:
     schema:
-      $ref: '../GenericResponse.yaml'
+      $ref: '../base/Response.yaml'
 
     examples:
       "OK":
         value:
-          code: 200
-          message: "OK"
+          "200 OK"

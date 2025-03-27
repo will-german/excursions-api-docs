@@ -1,9 +1,9 @@
 post:
   tags:
     - NOT AVAILABLE Trips
-  summary: Create Trip
-  description: Return a newly created Trip object.
-  operationId: create-trip
+  summary: Add Trip by Excursion Id
+  description: Create a new Trip and add it to an existing excursion's trip array.
+  operationId: add-trip-by-excursion-id
 
   security:
     - BearerToken: []
@@ -23,18 +23,25 @@ post:
       application/json:
         schema:
           allOf:
-            - $ref: '../components/schemas/BaseTrip.yaml'
+            - $ref: '../components/schemas/base/Trip.yaml'
 
             - type: object
               required:
                 - name
                 - description
-                - excursionId
-                - park
-                - campground
-                - thingstodo
                 - startDate
                 - endDate
+
+              properties:
+                park:
+                  $ref: '../components/schemas/ID.yaml'
+                campground:
+                  $ref: '../components/schemas/ID.yaml'
+                thingstodo:
+                  type: array
+                  description: Array of thingstodo ids.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
 
   responses:
     201:

@@ -65,7 +65,24 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/nps/Asset.yaml'
+            type: object
+            properties:
+              total:
+                type: string
+                format: int32
+                minimum: 0
+              limit:
+                type: string
+                format: int32
+                minimum: 0
+              start:
+                type: string
+                format: int32
+                minimum: 0
+              data:
+                type: array
+                items:
+                  $ref: '../components/schemas/nps/Asset.yaml'
           examples:
             "Example":
               value:

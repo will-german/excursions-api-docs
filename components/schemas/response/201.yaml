@@ -3,10 +3,9 @@ description: Created
 content:
   text/plain:
     schema:
-      $ref: '../GenericResponse.yaml'
+      $ref: '../base/Response.yaml'
 
     examples:
       "Created":
         value:
-          code: 201
-          message: "Created"
+          "201 Created"

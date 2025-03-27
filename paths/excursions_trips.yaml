@@ -1,26 +1,20 @@
-post:
+get:
   tags:
-    - NOT AVAILABLE Excursions
-  summary: Create Excursion
-  description: Return a new excursion object.
-  operationId: create-excursion
+    - NOT AVAILABLE Trips
+  summary: Get Hosted Trips
+  description: Returns an array of hosted Trip objects for a user.
+  operationId: get-trips-by-user
 
   security:
     - BearerToken: []
 
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          allOf:
-            - $ref: '../components/schemas/base/Excursion.yaml'
-
-            - type: object
-              required:
-                - name
-                - description
-
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+              type: object
               properties:
                 trips:
                   type: array
@@ -29,13 +23,9 @@ post:
                       - $ref: '../components/schemas/base/Trip.yaml'
 
                       - type: object
-                        required:
-                          - name
-                          - description
-                          - startDate
-                          - endDate
-
                         properties:
+                          _id:
+                            $ref: '../components/schemas/ID.yaml'
                           park:
                             $ref: '../components/schemas/ID.yaml'
                           campground:
@@ -45,14 +35,6 @@ post:
                             description: Array of thingstodo ids.
                             items:
                               $ref: '../components/schemas/ID.yaml'
-
-  responses:
-    201:
-      description: Created
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/excursion/Excursion.yaml'
           # examples:
           #   "Example":
           #     value:

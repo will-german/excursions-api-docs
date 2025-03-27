@@ -3,10 +3,9 @@ description: Unauthorized
 content:
   text/plain:
     schema:
-      $ref: '../GenericResponse.yaml'
+      $ref: '../base/Response.yaml'
 
     examples:
       "Unauthorized":
         value:
-          code: 401
-          message: "Unauthorized"
+          "401 Unauthorized"
