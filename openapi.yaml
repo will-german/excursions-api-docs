@@ -25,8 +25,19 @@ tags:
     description: Manage the authentication status of a user.
   - name: Park Details
     description: Retrieve detailed data about national parks from the NPS API.
-  - name: NOT AVAILABLE Multimedia
+  - name: Multimedia
     description: Access media data about national parks from the NPS API.
+  - name: N/A Excursions
+    description: Coming Soon.
+  - name: N/A Trips
+    description: Coming Soon.
+  - name: N/A Friends
+    description: Coming Soon.
+  - name: N/A Friend Requests
+    description: Coming Soon.
+  - name: N/A Sharing Excursions
+    description: Coming Soon.
+
 
 x-tagGroups:
   - name: Users
@@ -41,13 +52,14 @@ x-tagGroups:
 
   - name: Excursions
     tags:
-      - NOT AVAILABLE Excursions
-      - NOT AVAILABLE Trips
+      - N/A Excursions
+      - N/A Trips
 
   - name: Social
     tags:
-      - NOT AVAILABLE Friends
-      # - NOT AVAILABLE Sharing Excursions
+      - N/A Friends
+      - N/A Friend Requests
+      - N/A Sharing Excursions
 
 paths:
   # --- Users --- #
@@ -61,15 +73,20 @@ paths:
     $ref: './paths/user_sign-in.yaml'
   "/user/sign-out":
     $ref: './paths/user_sign-out.yaml'
-  # --- National Park Service API --- #
+  # --- National Parks --- #
   "/national-parks":
     $ref: './paths/national-parks.yaml'
   "/national-parks/summary":
     $ref: './paths/national-parks_summary.yaml'
+  "/national-parks/codes":
+    $ref: './paths/national-parks_codes.yaml'
+  # --- Campgrounds --- #
   "/campgrounds":
     $ref: './paths/campgrounds.yaml'
+  # --- Things-To-Do --- #
   "/things-to-do":
     $ref: './paths/things-to-do.yaml'
+  # --- Multimedia --- #
   "/multimedia/audio":
     $ref: './paths/multimedia_audio.yaml'
   "/multimedia/galleries":
@@ -79,27 +96,30 @@ paths:
   "/multimedia/videos":
     $ref: './paths/multimedia_videos.yaml'
   # --- Excursions --- #
-  "/excursion":
-    $ref: './paths/excursion.yaml'
-  "/excursion/{excursionId}":
-    $ref: './paths/excursion_{excursionId}.yaml'
-  "/excursion/{excursionId}/trips":
-    $ref: './paths/excursion_{excursionId}_trips.yaml'
-  "/excursion/{excursionId}/trip/{tripId}":
-    $ref: './paths/excursion_{excursionId}_trip_{tripId}.yaml'
-  # "/excursions/trips":
-  #   $ref: './paths/excursions_trips.yaml'
-  # "/excursions/trips/{tripdId}":
-  #   $ref: './paths/excursions_trips_{tripId}.yaml'
-  # --- Social --- #
-  "/friend":
-    $ref: './paths/friend.yaml'
-  "/friend/{friendId}":
-    $ref: './paths/friend_{friendId}.yaml'
-  "/friend-request":
-    $ref: './paths/friend-request.yaml'
-  "/friend-request/{friendId}":
-    $ref: './paths/friend-request_{friendId}.yaml'
-  # --- Shared Excursions --- #
-  # "/excursions/{excursionId}/share":
-  #   $ref: './paths/excursion_{excursionId}_share.yaml'
+  "/excursions":
+    $ref: './paths/excursions.yaml'
+  "/excursions/{excursionId}":
+    $ref: './paths/excursions_{excursionId}.yaml'
+  # --- Trips --- #
+  "/trips":
+    $ref: './paths/trips.yaml'
+  "/trips/{tripId}":
+    $ref: './paths/trips_{tripId}.yaml'
+  # --- Friends --- #
+  "/friends":
+    $ref: './paths/friends.yaml'
+  "/friends/{friendId}":
+    $ref: './paths/friends_{friendId}.yaml'
+  "/friends/requests":
+    $ref: './paths/friends_requests.yaml'
+  "/friends/requests/{requestId}":
+    $ref: './paths/friends_requests_{requestId}.yaml'
+  # --- Sharing Excursions --- #
+  "/excursions/share/{excursionId}":
+    $ref: './paths/excursions_share_{excursionId}.yaml'
+  "/excursions/share":
+    $ref: './paths/excursions_share.yaml'
+  "/excursions/share/{requestId}":
+    $ref: './paths/excursions_share_{inviteId}.yaml'
+    # patch request to update share request and join/decline an excursion invite
+    # delete request for a host to rescind an invitation

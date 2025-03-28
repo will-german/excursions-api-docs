@@ -1,0 +1,34 @@
+get:
+  tags:
+    - N/A Sharing Excursions
+  summary: Get Excursion Invites
+  description: Retrieve all incoming and outgoing Excursion invites.
+  operationId: get-excursion-invites
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+
+            properties:
+              incomingInvites:
+                type: array
+                items:
+                  $ref: '../components/schemas/ID.yaml'
+              outgoingInvites:
+                type: array
+                items:
+                  $ref: '../components/schemas/ID.yaml'
+    # examples
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

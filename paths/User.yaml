@@ -25,6 +25,8 @@ post:
               - password
 
               properties:
+                email:
+                  $ref: '../components/schemas/Email.yaml'
                 password:
                   $ref: '../components/schemas/Password.yaml'
 

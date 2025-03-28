@@ -1,0 +1,64 @@
+patch:
+  tags:
+    - N/A Friend Requests
+  summary: Handle Friend Request
+  description: Accept or decline an incoming friend request.
+  operationId: handle-friend-request
+
+  security:
+    - BearerToken: []
+  
+  parameters:
+    - in: path
+      name: requestId
+      schema:
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: string
+          enum:
+            - "pending"
+            - "accepted"
+            - "declined"
+
+  responses:
+    200:
+      $ref: '../components/schemas/response/200.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'
+
+delete:
+  tags:
+    - N/A Friend Requests
+  summary: Delete Friend Request
+  description: Delete an outgoing pending friend request.
+  operationId: delete-friend-request
+
+  security:
+    - BearerToken: []
+  
+  parameters:
+    - in: path
+      name: requestId
+      schema:
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  responses:
+    200:
+      $ref: '../components/schemas/response/200.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

@@ -7,6 +7,9 @@ allOf:
       _id:
         $ref: '../ID.yaml'
 
+      email:
+        $ref: '../Email.yaml' 
+
       friends:
         type: array
         description: IDs of this user's friends.

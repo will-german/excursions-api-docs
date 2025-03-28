@@ -9,5 +9,3 @@ properties:
     $ref: '../Name.yaml'
   lastName:
     $ref: '../Name.yaml'
-  email:
-    $ref: '../Email.yaml'

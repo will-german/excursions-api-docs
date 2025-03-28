@@ -1,0 +1,96 @@
+post:
+  tags:
+    - N/A Excursions
+  summary: Create Excursion
+  description: Return a new excursion object.
+  operationId: create-excursion
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../components/schemas/base/Excursion.yaml'
+
+            - type: object
+              required:
+                - name
+                - description
+
+              properties:
+                existingTrips:
+                  type: array
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+                newTrips:
+                  type: array
+                  items:
+                    allOf:
+                      - $ref: '../components/schemas/base/Trip.yaml'
+
+                      - type: object
+                        required:
+                          - name
+                          - description
+                          - startDate
+                          - endDate
+
+                        properties:
+                          park:
+                            $ref: '../components/schemas/ID.yaml'
+                          campground:
+                            $ref: '../components/schemas/ID.yaml'
+                          thingstodo:
+                            type: array
+                            description: Array of thingstodo ids.
+                            items:
+                              $ref: '../components/schemas/ID.yaml'
+
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Excursion.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'
+      
+get:
+  tags:
+    - N/A Excursions
+  summary: Get Excursions By User
+  description: Return a list of excursions by user.
+  operationId: get-excursions-by-user
+
+  security:
+    - BearerToken: []
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Excursion.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

@@ -17,3 +17,6 @@ properties:
       - "accepted"
       - "declined"
     default: pending
+  excursionId:
+    description: The Id of the excursion the user is being invited to.
+    $ref: './ID.yaml'
