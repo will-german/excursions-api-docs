@@ -2,7 +2,7 @@ post:
   tags:
     - User Management
   summary: Create User
-  description: Return a new user with a bearer token.
+  description: Create and return a new User alongside a Bearer Token.
   operationId: create-user
 
   security: []
@@ -55,7 +55,7 @@ get:
   tags:
     - User Management
   summary: Get User
-  description: Return a user object.
+  description: Return the currently authenticated User.
   operationId: get-user
 
   security:
@@ -86,7 +86,7 @@ patch:
   tags:
     - User Management
   summary: Update User
-  description: Return an updated user object.
+  description: Modify an existing User and return the updated User data.
   operationId: update-user
 
   security:
@@ -131,7 +131,7 @@ delete:
   tags:
     - User Management
   summary: Delete User
-  description: Return a deleted user object.
+  description: Delete an existing User and return the deleted User data.
   operationId: delete-user
 
   security:

@@ -2,7 +2,7 @@ get:
   tags:
     - Park Details
   summary: Get Things To Do
-  description: Return an array of things to do.
+  description: Retrieve suggested things to do recommended by and for specific national parks.
   operationId: getThingsToDo
 
   security:

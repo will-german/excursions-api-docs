@@ -2,7 +2,7 @@ post:
   tags:
     - User Authentication
   summary: Sign Out
-  description: Verify user and revoke bearer token.
+  description: Revoke a Bearer Token for the currently authenticated User.
   operationId: sign-user-out
 
   security:

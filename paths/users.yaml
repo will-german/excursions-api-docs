@@ -2,13 +2,26 @@ get:
   tags:
     - User Management
   summary: Get Users
-  description: Return a list of user objects.
+  description: Return a list of Users.
   operationId: get-users
 
   security:
     - BearerToken: []
 
   parameters:
+    - in: query
+      name: limit
+      description: The number of Users to be returned.
+      required: true
+      schema:
+        type: number
+        minimum: 0
+    - in: query
+      name: start
+      description: The document index upon which the returned list of Users should begin.
+      schema:
+        type: number
+        minimum: 0
     - in: query
       name: keywords
       description: Comma delimited list of terms to search on.

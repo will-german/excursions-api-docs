@@ -2,7 +2,7 @@ post:
   tags:
     - User Authentication
   summary: Sign In
-  description: Verify credentials and grant a bearer token.
+  description: Verify User credentials and grant a Bearer Token.
   operationId: sign-user-in
 
   requestBody:

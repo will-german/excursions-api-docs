@@ -2,7 +2,7 @@ patch:
   tags:
     - N/A Friend Requests
   summary: Handle Friend Request
-  description: Accept or decline an incoming friend request.
+  description: Manage an incoming friend request for the currently authenticated User.
   operationId: handle-friend-request
 
   security:

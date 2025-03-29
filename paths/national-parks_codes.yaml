@@ -2,7 +2,7 @@ get:
   tags:
     - Park Details
   summary: N/A Get National Park Codes
-  description: Retrieve and return all state codes and park codes from the NPS API.
+  description: Retrieve data about national parks (Park Code, State Code, etc.).
   operationId: get-national-parks-codes
 
   security:

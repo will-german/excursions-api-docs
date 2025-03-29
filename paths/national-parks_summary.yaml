@@ -2,7 +2,7 @@ get:
   tags:
     - Park Details
   summary: Get National Park Summaries
-  description: Retrieve curated data about national parks (url, name, description, parkCode, stateCode, etc).
+  description: Retrieve curated data about national parks (id, fullName, description, parkCode, etc.).
   operationId: get-national-parks-summary
 
   security:

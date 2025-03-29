@@ -2,7 +2,7 @@ post:
   tags:
     - N/A Sharing Excursions
   summary: Create Excursion Invite
-  description: Create and send an excursion invitation to a set of users. A user cannot be invited to the same excursion multiple times.
+  description: Create and send an excursion invitation to a set of Users. Users cannot be invited to the same excursion multiple times.
   operationId: create-excursion-invite
 
   security:
@@ -41,12 +41,14 @@ post:
     500:
       $ref: '../components/schemas/response/500.yaml'
 
+# if NO body then it is used for leaving
+# if BODY then it is used for removing
 delete:
   tags:
     - N/A Sharing Excursions
-  summary: Delete Excursion Invite
-  description: Rescind an Excursion invite from a user.
-  operationId: delete-excursion-invite
+  summary: Leave Excursion
+  description: Remove a User from an Excursion.
+  operationId: leave-excursion
 
   security:
     - BearerToken: []
@@ -60,13 +62,13 @@ delete:
       required: true
 
   requestBody:
-    required: true
+    required: false
     content:
       application/json:
         schema:
           allOf:
             - type: string
-              description: The ID of the user to rescind this Excursion invite from.
+              description: The ID of the User to remove from this excursion.
               
             - $ref: '../components/schemas/ID.yaml'
 

@@ -16,9 +16,9 @@ allOf:
           $ref: '../ID.yaml'
       trips:
         type: array
-        description: An array of Trip Ids.
+        description: An array of Trips.
         items:
-          $ref: '../ID.yaml'
+          $ref: './Trip.yaml'
       isComplete:
         type: boolean
         default: false

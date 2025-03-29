@@ -2,7 +2,7 @@ get:
   tags:
     - N/A Sharing Excursions
   summary: Get Excursion Invites
-  description: Retrieve all incoming and outgoing Excursion invites.
+  description: Retrieve all Excursion invites (incoming/outgoing) for the currently authenticated User.
   operationId: get-excursion-invites
 
   security:

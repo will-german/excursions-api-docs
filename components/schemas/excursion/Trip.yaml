@@ -7,6 +7,14 @@ allOf:
         $ref: '../ID.yaml'
       host:
         $ref: '../ID.yaml'
+      park:
+        $ref: '../ID.yaml'
+      campground:
+        $ref: '../ID.yaml'
+      thingstodo:
+        type: array
+        items:
+          $ref: '../ID.yaml'
       createdAt:
         type: string
         format: date-time

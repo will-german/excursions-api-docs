@@ -2,7 +2,7 @@ post:
   tags:
     - N/A Excursions
   summary: Create Excursion
-  description: Return a new excursion object.
+  description: Create a new Excursion. Returns the newly created Excursion object.
   operationId: create-excursion
 
   security:
@@ -72,7 +72,7 @@ get:
   tags:
     - N/A Excursions
   summary: Get Excursions By User
-  description: Return a list of excursions by user.
+  description: Retrieve all Excursions related to the currently authenticated User.
   operationId: get-excursions-by-user
 
   security:

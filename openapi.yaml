@@ -1,7 +1,19 @@
+# Endpoints requiring development:
+# 1. Get Users
+# 2. Get National Park Codes (Park & State Codes)
+# 3. Create/GetByUser/GetById/Update/Delete Excursion
+#   3.1 Host should contain a user object not an array.
+#   3.2 Trips should contain an array of objects, not ids
+#   3.3 Participants should contain an array of objects, not ids
+# 4. Trips should contain an array of objects (parks, campgrounds, thingstodo), not ids --> consider, do not implement as of yet
+# 5. Get/Delete Friends
+# 6. Create/Get/Handle/Delete Friend Requests
+# 7. Create/Get/Delete/Handle Excursion Invites
+
 openapi: 3.1.0
 
 info:
-  version: v1.4.0
+  version: v1.5.0
   title: Excursions API
   description: |
     A lightweight group travel planning app. Good luck implementing this. You're gonna need it. Last updated March 25th, 16:45 2025.
@@ -108,8 +120,6 @@ paths:
   # --- Friends --- #
   "/friends":
     $ref: './paths/friends.yaml'
-  "/friends/{friendId}":
-    $ref: './paths/friends_{friendId}.yaml'
   "/friends/requests":
     $ref: './paths/friends_requests.yaml'
   "/friends/requests/{requestId}":
@@ -117,9 +127,6 @@ paths:
   # --- Sharing Excursions --- #
   "/excursions/share/{excursionId}":
     $ref: './paths/excursions_share_{excursionId}.yaml'
-  "/excursions/share":
-    $ref: './paths/excursions_share.yaml'
-  "/excursions/share/{requestId}":
+  "/excursions/share/{inviteId}":
     $ref: './paths/excursions_share_{inviteId}.yaml'
-    # patch request to update share request and join/decline an excursion invite
-    # delete request for a host to rescind an invitation
+

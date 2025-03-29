@@ -41,7 +41,7 @@ get:
   tags:
     - N/A Friend Requests
   summary: Get Friend Requests
-  description: Get an updated list of all incoming and outgoing friend requests.
+  description: Retrieve a list of all friend requests (incoming/outgoing) for the currently authenticated User.
   operationId: get-friend-requests
 
   security:
@@ -70,60 +70,3 @@ get:
       $ref: '../components/schemas/response/401.yaml'
     500:
       $ref: '../components/schemas/response/500.yaml'
-
-
-
-
-# /friend/requests
-  # -> POST to create Friend Request [check]
-  # -> GET to retrieve all incoming and outgoing Friend Requests of a User. [check]
-
-# /friend/requests/{requestId}
-  # -> PATCH to update (accept/decline) a Friend Request
-  # -> DELETE to remove an OUTGOING Friend Request
-
-
-
-
-
-# post:
-#   tags:
-#     - NOT AVAILABLE Friends
-#   summary: Handle Friend Request
-#   description: Handle incoming pending friend request.
-#   operationId: handle-friend-request
-
-#   security:
-#     - BearerToken: []
-
-#   requestBody:
-#     required: true
-#     content:
-#       application/json:
-#         schema:
-#           type: object
-
-#           required:
-#             - requestId
-#             - userId
-#             - isAccepted
-          
-#           properties:
-#             requestId:
-#               $ref: '../components/schemas/ID.yaml'
-#               description: The Id of this friend request.
-#             userId:
-#               $ref: '../components/schemas/ID.yaml'
-#               description: The Id of the User updating this friend request.
-#             isAccepted:
-#               type: boolean
-
-#   responses:
-#     200:
-#       $ref: '../components/schemas/response/200.yaml'
-#     400:
-#       $ref: '../components/schemas/response/400.yaml'
-#     401:
-#       $ref: '../components/schemas/response/401.yaml'
-#     500:
-#       $ref: '../components/schemas/response/500.yaml'
