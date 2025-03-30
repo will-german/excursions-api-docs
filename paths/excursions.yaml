@@ -22,34 +22,10 @@ post:
                 - description
 
               properties:
-                existingTrips:
+                trips:
                   type: array
                   items:
                     $ref: '../components/schemas/ID.yaml'
-
-                newTrips:
-                  type: array
-                  items:
-                    allOf:
-                      - $ref: '../components/schemas/base/Trip.yaml'
-
-                      - type: object
-                        required:
-                          - name
-                          - description
-                          - startDate
-                          - endDate
-
-                        properties:
-                          park:
-                            $ref: '../components/schemas/ID.yaml'
-                          campground:
-                            $ref: '../components/schemas/ID.yaml'
-                          thingstodo:
-                            type: array
-                            description: Array of thingstodo ids.
-                            items:
-                              $ref: '../components/schemas/ID.yaml'
 
   responses:
     201:
