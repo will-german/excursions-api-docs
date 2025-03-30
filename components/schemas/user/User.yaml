@@ -46,6 +46,18 @@ allOf:
         items:
           $ref: '../ID.yaml'
 
+      incomingExcursionInvites:
+        type: array
+        description: IDs of excursion invites sent to this user.
+        items:
+          $ref: '../ID.yaml'
+
+      outgoingExcursionInvites:
+        type: array
+        description: IDs of excursion invites sent to other users.
+        items:
+          $ref: '../ID.yaml'
+
       hostedTrips:
         type: array
         description: IDs of trips created where this user is the host.

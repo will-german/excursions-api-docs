@@ -28,10 +28,8 @@ get:
                   type: string
                   minLength: 4
                   maxLength: 10
-          # examples:
-          #   "Example":
-          #     value:
-          #       $ref: '../examples/get_national-parks_summary.yaml'
+          example:
+            $ref: '../examples/getNationalParkCodes/Codes.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

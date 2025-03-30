@@ -1,0 +1,14 @@
+codes:
+  - parkCodes:
+    - anti
+    - apco
+    - asis
+    - blri
+    - blue
+
+  - stateCodes:
+    - AL
+    - AK
+    - AZ
+    - AR
+    - AS

@@ -30,6 +30,13 @@ post:
                 password:
                   $ref: '../components/schemas/Password.yaml'
 
+              example:
+                userName: joeuser
+                firstName: Joe
+                lastName: User
+                email: joe@user.com
+                password: Testing1234!
+
   responses:
     201:
       description: Created
@@ -42,10 +49,8 @@ post:
                 $ref: '../components/schemas/user/User.yaml'
               token:
                 $ref: '../components/schemas/BearerToken.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/user/User.yaml'
+            example:
+                $ref: '../examples/createUser/JoeUser.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     500:
@@ -71,10 +76,8 @@ get:
             properties:
               user:
                 $ref: '../components/schemas/user/User.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/user/User.yaml'
+            example:
+              $ref: '../examples/createUser/JoeUser.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -106,6 +109,9 @@ patch:
                 password:
                   $ref: '../components/schemas/Password.yaml'
 
+              example:
+                $ref: '../examples/createUser/JoeUser.yaml'
+
   responses:
     200:
       description: OK
@@ -117,9 +123,8 @@ patch:
               user:
                 description: An updated user object.
                 $ref: '../components/schemas/user/User.yaml'
-          examples:
-            "Example":
-                $ref: '../examples/user/User.yaml'
+            example:
+              $ref: '../examples/deleteUser/JoeUser.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -148,9 +153,8 @@ delete:
               user:
                 description: The deleted user object.
                 $ref: '../components/schemas/user/User.yaml'
-          examples:
-            "Example":
-                $ref: '../examples/user/User.yaml'
+            example:
+              $ref: '../examples/deleteUser/JoeUser.yaml'
     401:
       $ref: '../components/schemas/response/401.yaml'
     500:

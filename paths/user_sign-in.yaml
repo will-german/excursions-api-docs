@@ -21,6 +21,10 @@ post:
             - email
             - password
 
+          example:
+            email: joe@user.com
+            password: Testing1234!
+
   responses:
     200:
       description: OK
@@ -33,9 +37,8 @@ post:
                 $ref: '../components/schemas/user/User.yaml'
               token:
                 $ref: '../components/schemas/BearerToken.yaml'
-          examples:
-            "Example":
-                $ref: '../examples/user/User.yaml'
+          example:
+            $ref: '../examples/signIn/JoeUser.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     500:

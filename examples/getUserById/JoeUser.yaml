@@ -1,0 +1,15 @@
+_id: 67e35ab146687a50c9ec3ff9
+userName: joeuser
+firstName: Joe
+lastName: User
+email: joe@user.com
+password: Testing1234!
+friends: []
+outgoingFriendRequests: []
+incomingFriendRequests: []
+hostedExcursions: []
+sharedExcursions: []
+completedExcursions: []
+outgoingExcursionInvites: []
+incomingExcursionInvites: []
+hostedTrips: []

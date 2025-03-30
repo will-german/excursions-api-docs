@@ -84,10 +84,8 @@ get:
                 type: array
                 items:
                   $ref: '../components/schemas/nps/ThingsToDo.yaml'
-          examples:
-            "Example":
-              value:
-                $ref: '../examples/get_things-to-do.yaml'
+          example:
+            $ref: '../examples/get_things-to-do.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
