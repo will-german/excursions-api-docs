@@ -127,6 +127,8 @@ paths:
   # --- Sharing Excursions --- #
   "/excursions/share/{excursionId}":
     $ref: './paths/excursions_share_{excursionId}.yaml'
+  "/excursions/share":
+    $ref: './paths/excursions_share.yaml'
   "/excursions/share/{inviteId}":
     $ref: './paths/excursions_share_{inviteId}.yaml'
 

@@ -46,9 +46,11 @@ post:
 delete:
   tags:
     - N/A Sharing Excursions
-  summary: Leave Excursion
-  description: Remove a User from an Excursion.
-  operationId: leave-excursion
+  summary: Remove User By Excursion Id
+  description:
+    Remove the currently authenticated User from an excursion's participant list if they are not the excursion's host.
+    The excursion host may pass an optional User Id in the body to remove that User from the excursion's participant list.
+  operationId: remove-user-by-excursion-id
 
   security:
     - BearerToken: []
@@ -68,7 +70,7 @@ delete:
         schema:
           allOf:
             - type: string
-              description: The ID of the User to remove from this excursion.
+              description: Only pass this argument if the currently authenticated User is the host of the excursion.
               
             - $ref: '../components/schemas/ID.yaml'
 
