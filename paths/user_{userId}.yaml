@@ -33,6 +33,8 @@ get:
                     properties:
                       _id:
                         $ref: '../components/schemas/ID.yaml'
+                      email:
+                        $ref: '../components/schemas/Email.yaml'
 
             example:
               $ref: '../examples/getUserById/JoeUser.yaml'
