@@ -64,8 +64,8 @@ x-tagGroups:
 
   - name: Excursions
     tags:
-      - N/A Excursions
-      - N/A Trips
+      - Excursions
+      - Trips
 
   - name: Social
     tags:

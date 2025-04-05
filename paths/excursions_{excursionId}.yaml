@@ -1,6 +1,6 @@
 get:
   tags:
-    - N/A Excursions
+    - Excursions
   summary: Get Excursion By Id
   description: Return a new excursion object with a matching id.
   operationId: get-excursion-by-id
@@ -34,7 +34,7 @@ get:
 
 patch:
   tags:
-    - N/A Excursions
+    - Excursions
   summary: Update Excursion By Id
   description: Update an excursion object with a matching id.
   operationId: patch-excursion-by-id
@@ -83,7 +83,7 @@ patch:
 
 delete:
   tags:
-    - N/A Excursions
+    - Excursions
   summary: Delete Excursion By Id
   description: Delete an excursion object with a matching id.
   operationId: delete-excursion-by-id

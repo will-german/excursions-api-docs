@@ -1,6 +1,6 @@
 get:
   tags:
-    - N/A Trips
+    - Trips
   summary: Get Trip by Id
   description: Return a trip object.
   operationId: get-trip-by-id
@@ -35,7 +35,7 @@ get:
 
 patch:
   tags:
-    - N/A Trips
+    - Trips
   summary: Update Trip By Id
   description: Return an updated Trip object.
   operationId: patch-trip-by-id
@@ -91,7 +91,7 @@ patch:
 
 delete:
   tags:
-    - N/A Trips
+    - Trips
   summary: Delete Trip By Id
   description: Return the deleted Trip object.
   operationId: delete-trip-by-id

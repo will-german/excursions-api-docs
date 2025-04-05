@@ -1,6 +1,6 @@
 post:
   tags:
-    - N/A Trips
+    - Trips
   summary: Create Trip
   description: Create a new Trip and add it to the Users hostedTrips array.
   operationId: create-trip
@@ -53,7 +53,7 @@ post:
 
 get:
   tags:
-    - N/A Trips
+    - Trips
   summary: Get Trips by User
   description: Returns an array of Trips with a matching Excursion Id.
   operationId: get-trips-by-user

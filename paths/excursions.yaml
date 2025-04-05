@@ -46,7 +46,7 @@ post:
       
 get:
   tags:
-    - N/A Excursions
+    - Excursions
   summary: Get Excursions By User
   description: Retrieve all Excursions related to the currently authenticated User.
   operationId: get-excursions-by-user
