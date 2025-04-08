@@ -108,15 +108,19 @@ paths:
   "/multimedia/videos":
     $ref: './paths/multimedia_videos.yaml'
   # --- Excursions --- #
+  "/excursion":
+    $ref: './paths/excursion.yaml'
   "/excursions":
     $ref: './paths/excursions.yaml'
-  "/excursions/{excursionId}":
-    $ref: './paths/excursions_{excursionId}.yaml'
+  "/excursion/{excursionId}":
+    $ref: './paths/excursion_{excursionId}.yaml'
   # --- Trips --- #
+  "/trip":
+    $ref: './paths/trip.yaml'
   "/trips":
     $ref: './paths/trips.yaml'
-  "/trips/{tripId}":
-    $ref: './paths/trips_{tripId}.yaml'
+  "/trip/{tripId}":
+    $ref: './paths/trip_{tripId}.yaml'
   # --- Friends --- #
   "/friends":
     $ref: './paths/friends.yaml'

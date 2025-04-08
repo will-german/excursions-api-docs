@@ -1,0 +1,52 @@
+post:
+  tags:
+    - Trips
+  summary: Create Trip
+  description: Create a new Trip and add it to the Users hostedTrips array.
+  operationId: create-trip
+
+  security:
+    - BearerToken: []
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../components/schemas/base/Trip.yaml'
+
+            - type: object
+              required:
+                - name
+                - description
+                - startDate
+                - endDate
+
+              properties:
+                park:
+                  $ref: '../components/schemas/ID.yaml'
+                campground:
+                  $ref: '../components/schemas/ID.yaml'
+                thingstodo:
+                  type: array
+                  description: Array of thingstodo ids.
+                  items:
+                    $ref: '../components/schemas/ID.yaml'
+
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/excursion/Trip.yaml'
+          # examples:
+          #   "Example":
+          #     value:
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'
