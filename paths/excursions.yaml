@@ -17,15 +17,10 @@ get:
             type: object
 
             properties:
-              hosted:
+              excursions:
                 type: array
                 items:
                   $ref: '../components/schemas/excursion/Excursion.yaml'
-              shared:
-                type: array
-                items:
-                  $ref: '../components/schemas/excursion/Excursion.yaml'
-            # examples
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

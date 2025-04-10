@@ -39,17 +39,16 @@ tags:
     description: Retrieve detailed data about national parks from the NPS API.
   - name: Multimedia
     description: Access media data about national parks from the NPS API.
-  - name: N/A Excursions
-    description: Coming Soon.
-  - name: N/A Trips
-    description: Coming Soon.
-  - name: N/A Friends
-    description: Coming Soon.
-  - name: N/A Friend Requests
-    description: Coming Soon.
-  - name: N/A Sharing Excursions
-    description: Coming Soon.
-
+  - name: Excursions
+    description: Create a collection of trips that you can share with friends.
+  - name: Trips
+    description: Plan a trip to a national park. Pick a campground, things to do, and dates.
+  - name: Friends
+    description: Add other users to share excursions.
+  - name: Friend Requests
+    description: The medium used to add users to friends lists.
+  - name: Sharing Excursions
+    description: Share your excursions with friends.
 
 x-tagGroups:
   - name: Users
@@ -69,9 +68,9 @@ x-tagGroups:
 
   - name: Social
     tags:
-      - N/A Friends
-      - N/A Friend Requests
-      - N/A Sharing Excursions
+      - Friends
+      - Friend Requests
+      - Sharing Excursions
 
 paths:
   # --- Users --- #
@@ -124,15 +123,21 @@ paths:
   # --- Friends --- #
   "/friends":
     $ref: './paths/friends.yaml'
+  "/friends/{friendId}":
+    $ref: './paths/friends_{friendId}.yaml'
   "/friends/requests":
     $ref: './paths/friends_requests.yaml'
   "/friends/requests/{requestId}":
     $ref: './paths/friends_requests_{requestId}.yaml'
   # --- Sharing Excursions --- #
-  "/excursions/share/{excursionId}":
-    $ref: './paths/excursions_share_{excursionId}.yaml'
-  "/excursions/share":
-    $ref: './paths/excursions_share.yaml'
-  "/excursions/share/{inviteId}":
-    $ref: './paths/excursions_share_{inviteId}.yaml'
+  "/share/excursion/{excursionId}":
+    $ref: './paths/share_excursion_{excursionId}.yaml'
+  "/share/excursions":
+    $ref: './paths/share_excursions.yaml'
+  "/share/excursions/{inviteId}":
+    $ref: './paths/share_excursions_{inviteId}.yaml'
+  "/remove/excursions/{excursionId}":
+    $ref: './paths/remove_excursions_{excursionId}.yaml'
+  "/leave/excursions/{excursionId}":
+    $ref: './paths/leave_excursions_{excursionId}.yaml'
 

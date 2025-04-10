@@ -1,0 +1,66 @@
+{
+    "excursion": [
+        {
+            "_id": "67f7078e410fa2ebbc4db456",
+            "name": "Example Excursion",
+            "description": "This is a sample excursion description.",
+            "host": [
+                {
+                    "_id": "67e9674a55805ab089315eb3",
+                    "userName": "joeuser",
+                    "firstName": "joe",
+                    "lastName": "user",
+                    "email": "joe@user.com"
+                }
+            ],
+            "participants": [],
+            "trips": [
+                {
+                    "_id": "67f08c5244e71e6a5752811f",
+                    "name": "Trip 1 Updated",
+                    "description": "This is a trip description.",
+                    "park": "307BE169-345D-472C-8128-20F1D59864A7",
+                    "campground": "43CF9CC2-4B3F-496F-9587-26F98A454217",
+                    "thingstodo": [
+                        "F929D093-647A-4B35-B292-16BC2462266C"
+                    ],
+                    "startDate": "2025-06-01T20:00:00.000Z",
+                    "endDate": "2025-07-01T20:00:00.000Z",
+                    "createdAt": "2025-04-05T01:50:10.422Z",
+                    "updatedAt": "2025-04-05T01:53:00.103Z"
+                },
+                {
+                    "_id": "67f08c6444e71e6a5752812d",
+                    "name": "Trip 2",
+                    "description": "This is a trip description.",
+                    "park": "307BE169-345D-472C-8128-20F1D59864A7",
+                    "campground": "43CF9CC2-4B3F-496F-9587-26F98A454217",
+                    "thingstodo": [
+                        "F929D093-647A-4B35-B292-16BC2462266C"
+                    ],
+                    "startDate": "2025-06-01T20:00:00.000Z",
+                    "endDate": "2025-07-01T20:00:00.000Z",
+                    "createdAt": "2025-04-05T01:50:28.958Z",
+                    "updatedAt": "2025-04-05T01:50:28.958Z"
+                },
+                {
+                    "_id": "67f08c7044e71e6a5752813b",
+                    "name": "Trip 3",
+                    "description": "This is a trip description.",
+                    "park": "307BE169-345D-472C-8128-20F1D59864A7",
+                    "campground": "43CF9CC2-4B3F-496F-9587-26F98A454217",
+                    "thingstodo": [
+                        "F929D093-647A-4B35-B292-16BC2462266C"
+                    ],
+                    "startDate": "2025-06-01T20:00:00.000Z",
+                    "endDate": "2025-07-01T20:00:00.000Z",
+                    "createdAt": "2025-04-05T01:50:40.748Z",
+                    "updatedAt": "2025-04-05T01:50:40.748Z"
+                }
+            ],
+            "isComplete": false,
+            "createdAt": "2025-04-09T23:49:34.740Z",
+            "updatedAt": "2025-04-09T23:49:34.740Z"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 post:
   tags:
-    - N/A Friend Requests
+    - Friend Requests
   summary: Create Friend Request
   description: Create and send a friend request to a particular user. Multiple friend requests cannot be sent to the same user.
   operationId: create-friend-request
@@ -28,8 +28,10 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/FriendRequest.yaml'
-    # examples
+            type: object
+            properties:
+              friendRequest:
+                $ref: '../components/schemas/FriendRequest.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -39,7 +41,7 @@ post:
 
 get:
   tags:
-    - N/A Friend Requests
+    - Friend Requests
   summary: Get Friend Requests
   description: Retrieve a list of all friend requests (incoming/outgoing) for the currently authenticated User.
   operationId: get-friend-requests
@@ -55,15 +57,10 @@ get:
           schema:
             type: object
             properties:
-              incomingRequests:
+              friendRequests:
                 type: array
                 items:
                   $ref: '../components/schemas/FriendRequest.yaml'
-              outgoingRequests:
-                type: array
-                items:
-                  $ref: '../components/schemas/FriendRequest.yaml'
-    # examples
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

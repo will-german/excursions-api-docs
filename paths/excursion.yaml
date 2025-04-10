@@ -27,6 +27,10 @@ post:
                   items:
                     $ref: '../components/schemas/ID.yaml'
 
+            - $example:
+                name: "RDR"
+                description: "RDR2"
+
   responses:
     201:
       description: Created
@@ -34,9 +38,8 @@ post:
         application/json:
           schema:
             $ref: '../components/schemas/excursion/Excursion.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+          example:
+            $ref: '../examples/post_excursion.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

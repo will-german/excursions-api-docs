@@ -21,10 +21,10 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/excursion/Excursion.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              excursion:
+                $ref: '../components/schemas/excursion/Excursion.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -70,10 +70,10 @@ patch:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/excursion/Excursion.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              excursion:
+                $ref: '../components/schemas/excursion/Excursion.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -101,14 +101,7 @@ delete:
 
   responses:
     200:
-      description: OK
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/excursion/Excursion.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+      $ref: '../components/schemas/response/200.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

@@ -1,0 +1,29 @@
+delete:
+  tags:
+    - Sharing Excursions
+  summary: Leave Excursion By Id
+  description:
+    A participant of an excursion may leave via this endpoint.
+  operationId: leave-excursion-by-id
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  responses:
+    200:
+      $ref: '../components/schemas/response/200.yaml'
+    # examples
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

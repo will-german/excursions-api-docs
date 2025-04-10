@@ -6,17 +6,22 @@ properties:
     $ref: './ID.yaml'
   sender:
     description: The request sender's User Id.
-    $ref: './ID.yaml'
+    allOf:
+      - $ref: './BaseUser.yaml'
+      - type: object
+        properties:
+          _id:
+            $ref: './ID.yaml'
   receiver:
     description: The request receiver's User Id.
-    $ref: './ID.yaml'
-  status:
-    type: string
-    enum:
-      - "pending"
-      - "accepted"
-      - "declined"
-    default: pending
-  excursionId:
-    description: The Id of the excursion the user is being invited to.
-    $ref: './ID.yaml'
+    allOf:
+      - $ref: './BaseUser.yaml'
+      - type: object
+        properties:
+          _id:
+            $ref: './ID.yaml'
+  isAccepted:
+    type: boolean
+    default: false
+  excursion:
+    $ref: './excursion/Excursion.yaml'

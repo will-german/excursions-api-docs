@@ -40,10 +40,10 @@ post:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/excursion/Trip.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              trip:
+                $ref: '../components/schemas/excursion/Trip.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

@@ -1,19 +1,12 @@
 patch:
   tags:
-    - Friend Requests
-  summary: Handle Friend Request
-  description: Manage an incoming friend request for the currently authenticated User.
-  operationId: handle-friend-request
+    - Sharing Excursions
+  summary: Handle Excursion Invite
+  description: Accept or decline an Excursion invite.
+  operationId: handle-excursion-invite
 
   security:
     - BearerToken: []
-  
-  parameters:
-    - in: path
-      name: requestId
-      schema:
-        $ref: '../components/schemas/ID.yaml'
-      required: true
 
   requestBody:
     required: true
@@ -31,14 +24,7 @@ patch:
 
   responses:
     200:
-      description: OK
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              friendRequest:
-                $ref: '../components/schemas/FriendRequest.yaml'
+      $ref: '../components/schemas/response/200.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -48,18 +34,19 @@ patch:
 
 delete:
   tags:
-    - Friend Requests
-  summary: Delete Friend Request
-  description: Delete an outgoing pending friend request.
-  operationId: delete-friend-request
+    - Sharing Excursions
+  summary: Delete Excursion Invite
+  description: Rescind an Excursion invite for a given User.
+  operationId: delete-excursion-invite
 
   security:
     - BearerToken: []
-  
+
   parameters:
     - in: path
-      name: requestId
+      name: excursionId
       schema:
+        type: string
         $ref: '../components/schemas/ID.yaml'
       required: true
 

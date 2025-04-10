@@ -6,7 +6,13 @@ allOf:
       _id:
         $ref: '../ID.yaml'
       host:
-        $ref: '../ID.yaml'
+        description: The host user object of a Trip.
+        allOf:
+          - $ref: '../BaseUser.yaml'
+          - type: object
+            properties:
+              _id:
+                $ref: '../ID.yaml'
       park:
         $ref: '../ID.yaml'
       campground:

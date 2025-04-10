@@ -10,10 +10,6 @@ properties:
   receiver:
     description: The request receiver's User Id.
     $ref: './ID.yaml'
-  status:
-    type: string
-    enum:
-      - "pending"
-      - "accepted"
-      - "declined"
-    default: pending
+  isAccepted:
+    type: boolean
+    default: false

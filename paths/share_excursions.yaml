@@ -17,15 +17,8 @@ get:
             type: object
 
             properties:
-              incomingInvites:
-                type: array
-                items:
-                  $ref: '../components/schemas/ID.yaml'
-              outgoingInvites:
-                type: array
-                items:
-                  $ref: '../components/schemas/ID.yaml'
-    # examples
+              excursionInvites:
+                $ref: '../components/schemas/ShareRequest.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

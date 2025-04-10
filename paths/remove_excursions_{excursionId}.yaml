@@ -1,0 +1,39 @@
+delete:
+  tags:
+    - Sharing Excursions
+  summary: Remove User By Excursion Id
+  description:
+    The excursion host may remove a participant via this endpoint.
+  operationId: remove-user-by-excursion-id
+
+  security:
+    - BearerToken: []
+
+  parameters:
+    - in: path
+      name: excursionId
+      schema:
+        type: string
+        $ref: '../components/schemas/ID.yaml'
+      required: true
+
+  requestBody:
+    required: false
+    content:
+      application/json:
+        schema:
+          allOf:
+            - type: string
+              description: The Id of the participant to remove.
+              
+            - $ref: '../components/schemas/ID.yaml'
+
+  responses:
+    200:
+      $ref: '../components/schemas/response/200.yaml'
+    400:
+      $ref: '../components/schemas/response/400.yaml'
+    401:
+      $ref: '../components/schemas/response/401.yaml'
+    500:
+      $ref: '../components/schemas/response/500.yaml'

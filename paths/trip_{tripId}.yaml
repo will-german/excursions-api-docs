@@ -22,10 +22,10 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/excursion/Trip.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              trip:
+                $ref: '../components/schemas/excursion/Trip.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -78,10 +78,10 @@ patch:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/excursion/Trip.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              trip:
+                $ref: '../components/schemas/excursion/Trip.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:
@@ -109,27 +109,7 @@ delete:
 
   responses:
     200:
-      description: OK
-      content:
-        application/json:
-          schema:
-            allOf:
-              - $ref: '../components/schemas/excursion/Trip.yaml'
-
-              - type: object
-                properties:
-                  park:
-                    $ref: '../components/schemas/ID.yaml'
-                  campground:
-                    $ref: '../components/schemas/ID.yaml'
-                  thingstodo:
-                    type: array
-                    description: Array of thingstodo ids.
-                    items:
-                      $ref: '../components/schemas/ID.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+      $ref: '../components/schemas/response/200.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

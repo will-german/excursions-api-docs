@@ -7,13 +7,23 @@ allOf:
       _id:
         $ref: '../ID.yaml'
       host:
-        $ref: '../ID.yaml'
-        description: The Id of the User who created this Excursion.
+        description: The host user object of an excursion.
+        allOf:
+          - $ref: '../BaseUser.yaml'
+          - type: object
+            properties:
+              _id:
+                $ref: '../ID.yaml'
       participants:
+        description: An array of Users who are participants of this Excursion.
         type: array
-        description: An array of User Ids.
         items:
-          $ref: '../ID.yaml'
+          allOf:
+            - $ref: '../BaseUser.yaml'
+            - type: object
+              properties:
+                _id:
+                  $ref: '../ID.yaml'
       trips:
         type: array
         description: An array of Trips.

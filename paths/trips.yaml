@@ -14,12 +14,12 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: '../components/schemas/excursion/Trip.yaml'
-          # examples:
-          #   "Example":
-          #     value:
+            type: object
+            properties:
+              trips:
+                type: array
+                items:
+                  $ref: '../components/schemas/excursion/Trip.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

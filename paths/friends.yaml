@@ -1,8 +1,6 @@
-## this is for Friend Manage
-# --> Getting List of Friends + Removing Friends
 get:
   tags:
-    - N/A Friends
+    - Friends
   summary: Get Friends
   description: Get a User's friends list.
   operationId: get-friends
@@ -16,44 +14,20 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              allOf:
-                - $ref: '../components/schemas/base/User.yaml'
-                - type: object
-                  properties:
-                    _id:
-                      $ref: '../components/schemas/ID.yaml'
-    400:
-      $ref: '../components/schemas/response/400.yaml'
-    401:
-      $ref: '../components/schemas/response/401.yaml'
-    500:
-      $ref: '../components/schemas/response/500.yaml'
-
-
-delete:
-  tags:
-    - N/A Friends
-  summary: Delete Friend
-  description: Remove a friend from the currently authenticated User's friends list.
-  operationId: remove-friend
-
-  security:
-    - BearerToken: []
-
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: string
-          description: The id of the friend to remove.
-          $ref: '../components/schemas/ID.yaml'
-
-  responses:
-    200:
-      $ref: '../components/schemas/response/200.yaml'
+            type: object
+            
+            properties:
+              friends:
+                type: array
+                items:
+                  allOf:
+                    - $ref: '../components/schemas/base/User.yaml'
+                    - type: object
+                      properties:
+                        _id:
+                          $ref: '../components/schemas/ID.yaml'
+                        email:
+                          $ref: '../components/schemas/Email.yaml'
     400:
       $ref: '../components/schemas/response/400.yaml'
     401:

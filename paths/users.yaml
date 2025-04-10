@@ -1,7 +1,7 @@
 get:
   tags:
     - User Management
-  summary: N/A Get Users
+  summary: Get Users
   description: Return a list of Users.
   operationId: get-users
 
@@ -41,14 +41,19 @@ get:
               type: object
               description: A limited user object designed for public use.
               properties:
-                _id:
-                  $ref: '../components/schemas/ID.yaml'
-                userName:
-                  $ref: '../components/schemas/Name.yaml'
-                firstName:
-                  $ref: '../components/schemas/Name.yaml'
-                lastName:
-                  $ref: '../components/schemas/Name.yaml'
+                user:
+                  type: object
+                  properties:
+                    _id:
+                      $ref: '../components/schemas/ID.yaml'
+                    userName:
+                      $ref: '../components/schemas/Name.yaml'
+                    firstName:
+                      $ref: '../components/schemas/Name.yaml'
+                    lastName:
+                      $ref: '../components/schemas/Name.yaml'
+                    email:
+                      $ref: '../components/schemas/Email.yaml'
               example:
                 $ref: '../examples/getUsers/JoeUser.yaml'
     400:
