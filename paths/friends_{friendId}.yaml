@@ -1,6 +1,6 @@
 delete:
   tags:
-    - N/A Friends
+    - Friends
   summary: Delete Friend
   description: Remove a friend from the currently authenticated User's friends list.
   operationId: remove-friend
