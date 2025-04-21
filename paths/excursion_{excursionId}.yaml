@@ -60,6 +60,10 @@ patch:
 
           - type: object
             properties:
+              trips:
+                type: array
+                items:
+                  $ref: '../components/schemas/ID.yaml'
               isComplete:
                 type: boolean
                 default: false
