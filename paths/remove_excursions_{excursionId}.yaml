@@ -23,10 +23,11 @@ delete:
       application/json:
         schema:
           allOf:
-            - type: string
+            - type: object
               description: The Id of the participant to remove.
-              
-            - $ref: '../components/schemas/ID.yaml'
+              properties:
+                participantId:
+                  - $ref: '../components/schemas/ID.yaml'
 
   responses:
     200:
