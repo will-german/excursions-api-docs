@@ -2,7 +2,7 @@ post:
   tags:
     - Sharing Excursions
   summary: Create Excursion Invite
-  description: Create and send an excursion invitation to a set of Users. Users cannot be invited to the same excursion multiple times.
+  description: Create and send an excursion invitation to a user.
   operationId: create-excursion-invite
 
   security:
